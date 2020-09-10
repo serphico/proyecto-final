@@ -1,0 +1,985 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@300;400;500&display=swap');
+
+
+//Colores
+$colorRojo:firebrick;
+$colorNaranja:orange;
+$colorGris:#d3d3d3;
+$colorBlancoHumo:whitesmoke;
+$colorBlanco:white;
+$colorNegro:black;
+
+//Tipografia
+$roboto: 'Roboto', sans-serif;
+$robotoS: 'Roboto Slab', serif;
+
+//mixins 
+
+@mixin estiloRedes {
+    width: 15%;
+    cursor: pointer;
+}
+
+@mixin encabezadoSecciones {
+    width: 100%;
+    margin: 3% 0% 0% 0%;
+    text-align: center;
+    font-size: 2rem;
+    font-family: $robotoS;
+    color: $colorRojo;
+}
+
+@mixin Botones{
+    background-color: white;
+    border: none;
+    color: $colorRojo;
+    border-radius: 5rem;
+    font-size: 1.2rem;
+    font-weight:900;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+
+
+html{
+    font-family: $roboto;
+}
+
+/*******************************************
+* COMIENZA ESTILOS DEL HEADER:
+*******************************************/
+
+header{
+    background-color: $colorGris;
+    padding-left: 10%;
+    .logo{
+        width: 100%;
+    }
+    
+    .menu{
+        padding-left: 10%;
+        ul{
+            li{
+                .active{
+                    color: $colorRojo !important;
+                    font-weight: 700;
+                }
+                
+                a{
+                    text-decoration: none;
+                    cursor: pointer;
+                    padding: 0% 1% 0% 1%;
+                    list-style: none;
+                    color: $colorNegro;
+                    font-size: 1.6rem;
+                }
+                a:hover{
+                    color: $colorRojo !important;
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    text-align: center;
+                }
+            }
+        }
+    } 
+
+    .contenedorRedesHeader {
+        h3{
+            font-size: 1rem;
+        }
+        img{
+            @include estiloRedes;
+        }
+    }
+}
+
+/*******************************************
+* FIN ESTILOS DE HEADER
+*******************************************/
+
+
+/*******************************************
+* COMIENZA ESTILOS DEL INDEX.
+*******************************************/
+
+.fondoSection{
+    background-image: url('../img/index/fondo.png');
+    background-repeat: no-repeat;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+
+    h1{
+        font-family: $robotoS;
+        font-size: 3rem;
+        color: transparent;
+        transform: translateX(28rem);
+        animation:forwards;
+        animation-name: entraTexto;
+        animation-duration: 4s;
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes entraTexto {
+        0% {transform: translateX(28rem);}
+        50% {transform: translateX(-5rem);}
+        100% {transform: translateX(0rem); color:$colorRojo;}
+      }
+
+}
+
+.contenedorDestacado {
+    margin:2% 0% 2% 0%;
+
+    h2{
+       @include encabezadoSecciones;
+    }
+
+    .contenedorImgDestacado {
+        text-align: center;
+    
+        img{
+            width: 80%;
+            border-radius: 50%;
+            transition: width 0.5s;
+            transition-timing-function: ease-in;
+            cursor: pointer;
+        }
+    
+        img:hover{
+            width: 90%;
+        }
+    
+        p{
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: $colorRojo;
+        }
+        
+    }
+}
+
+
+
+/*******************************************
+* FIN ESTILOS DEL INDEX.
+*******************************************/
+
+
+/*******************************************
+* COMIENZA ESTILOS DE SOBRE MI:
+*******************************************/
+.padreContenedorSobreMi{
+
+h2{
+    @include encabezadoSecciones;
+}
+
+.contenedorSobreMi{
+    width: 90%;
+    margin: 3% auto;
+    padding: 2%;
+    display:flex;     
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $colorRojo;
+    border-radius: 1rem;
+
+    img{
+        width: 50%;
+    }
+
+    div{
+        width: 50%;
+        padding: 5%;
+    }
+
+    h3{
+        color: $colorBlanco;
+        text-align: center;
+        font-weight: 900;
+    }
+
+    p{
+        color: $colorBlanco;
+        text-align: justify;
+    }
+}
+
+}
+
+/*******************************************
+* FIN ESTILOS DE SOBRE MI.
+*******************************************/
+
+
+/*******************************************
+* COMIENZA ESTILOS DEL PEDIDOS:
+*******************************************/
+
+.contenedorPedidos {
+
+    form{
+        width: 80%;
+        margin: 3% auto;
+        padding: 1%;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        border: dotted 3px $colorRojo;
+        border-radius: 1rem;
+
+        .contenedorInfo{ 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            label{ 
+                font-weight: 700;
+                
+            }
+
+            input{ 
+                margin-bottom: 20%;
+                
+            }
+            
+        }
+
+        .contenedoBoton{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        
+            input{
+                margin-top: 5%;
+                padding: 0.5% 2% 0.5% 2%;
+                background-color: $colorRojo !important;
+                color: $colorBlanco !important;
+                @include Botones;
+            }
+        }
+    
+    }
+
+    h2{
+       @include encabezadoSecciones;
+    }
+
+    p{
+        width: 100%;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+}
+
+
+#fechaGrid{
+    text-align: center;
+    background-color: $colorRojo;
+    border-radius: 1rem;
+    display: grid;
+    align-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 1%;
+    row-gap: 1%;
+    padding: 4% 1% 4% 1%;
+
+    h3{
+        font-size: 2rem;
+        font-weight: 900;
+        color: $colorBlanco;
+        align-self: center;
+        grid-column-start: 1;
+        grid-column-end: 8;
+    }
+
+    h4{
+        align-self: center;
+        color: $colorBlanco;
+     }
+
+     h5{
+        display: none;
+     }
+
+
+     span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 4rem;
+        background-color: $colorBlancoHumo;
+        border-radius: 0.5rem;
+        cursor: pointer;
+    }
+
+    span:hover{
+        background-color: $colorNaranja;
+    
+    }
+     
+}
+
+
+.contenedorPrecios{
+    width: 60%;
+    margin: 2% auto;
+    display: grid;
+    align-items: start;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr ;
+    row-gap: 2%;
+    padding: 1%;
+
+    h3{
+        justify-self: center;
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+
+    div{
+        display: flex;
+        flex-direction: column;
+        
+        h4{
+            font-size: 1rem;
+            color: $colorBlanco;
+            background-color: $colorRojo;
+            align-self: stretch;
+            text-align: center;
+            padding: 1%;
+        }
+
+        span{
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 2% 0% 2% 5%;
+            margin-top: 5%;
+            text-align: center;
+        }
+
+        .rowGrey{
+            background-color: $colorGris;
+        }
+        
+        .rowOrange{
+            background-color: $colorRojo;
+            color: $colorBlanco;
+        }
+        
+        
+    }
+}
+
+/*******************************************
+* FIN ESTILOS DEL PEDIDOS.
+*******************************************/
+
+/*******************************************
+* COMIENZA ESTILOS DE PATRONES:
+*******************************************/
+
+.contenedorPatrones{
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    h2{
+        @include encabezadoSecciones;        
+    }
+
+
+.hijoContenedorPatrones{
+    background-color:  $colorRojo;
+    padding: 1% 0% 1% 0%;
+    margin-bottom: 2%;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    -webkit-box-shadow: 10px 10px 28px -13px rgba(0,0,0,0.9);
+    -moz-box-shadow: 10px 10px 28px -13px rgba(0,0,0,0.9);
+    box-shadow: 10px 10px 28px -13px rgba(0,0,0,0.9);
+
+    img{
+        width: 90%;
+        border:solid 5px $colorBlanco;
+        border-radius: 50%;
+    }
+
+    h3{
+        margin-top: 3%;
+        padding: 2%;
+        text-align: center;
+        font-size: 1.2rem;
+        font-family: $robotoS;
+        color: $colorRojo;
+        background-color: $colorBlanco;
+        border-radius: 5rem;
+        -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+       
+    }
+
+    p{
+        font-size: 1.3rem;
+        color: $colorBlanco;
+        font-weight:400;
+        font-style: italic;
+        padding: 1% 0% 2% 0%;
+    }
+
+    .precioPatrones{
+        display: flex;
+        width:30%;
+        flex-direction: column;
+        text-align: center;
+        padding: 1%;
+        border-top: solid 2px $colorBlanco;
+        border-bottom: solid 2px $colorBlanco;
+
+        span{
+
+            font-weight: 900;
+            color: $colorBlanco;
+            padding: 1%;
+        }
+    }
+
+    button{
+        margin-top: 5%;
+        padding: 2%;
+        @include Botones;
+    
+    }
+
+    button:hover{
+        cursor: pointer;
+        animation: forwards;
+        animation-name: botonAnimación;
+        animation-duration: 3s;
+    }
+    
+    @keyframes botonAnimación{
+        0%{ transform: rotate(0deg); width:40%;}
+        25%{ transform: rotate(8deg); width:45%}
+        75%{ transform: rotate(-8deg); width:45%;}
+        100%{ transform: rotate(0deg); width:40%;}
+    }
+    
+}
+}
+
+/*******************************************
+* FIN ESTILOS DE PATRONES:
+*******************************************/
+
+/*******************************************
+* COMIENZA ESTILOS DEL CONTACTO:
+*******************************************/
+
+.contenedorFormulario{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    h2{
+        @include encabezadoSecciones;
+    }
+
+    form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 40%;
+        padding: 1%;
+        margin: 4%;
+        background-color: $colorRojo;
+        position: relative;
+        font-weight: 700;
+        color: $colorBlanco;
+        border-radius: 1rem;
+
+        div{
+            width: 70%;
+
+            label{
+                position: absolute;
+            }
+    
+            input[type=text], input[type=email], select{
+                width: 100%;
+                color: $colorBlanco;
+                font-size: 1.2rem;
+                border: none;
+                margin: 5% 0% 5% 0%;
+                border-bottom: solid 2px $colorBlanco;
+                background: transparent;
+            }
+
+            select{
+                option{
+                    background-color: $colorRojo;
+                }
+            }
+
+            textarea{
+                width: 100%;
+                margin: 3% 0% 3% 0%;
+                font-size: 1rem;
+            }
+        
+        }
+
+
+
+
+        .botonForm{
+            margin: 3% 0% 3% 0%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            input{
+                width: 40%;
+                padding: 1% 3% 1% 3%;
+               @include Botones;
+            }
+        }
+    }
+
+
+    
+}
+
+/*******************************************
+* FIN ESTILOS DEL CONTACTO.
+*******************************************/
+
+/*******************************************
+* COMIENZA ESTILOS DEL FOOTER:
+*******************************************/
+
+footer{
+    background-color: #d3d3d3;
+    padding: 1% 0% 0.5% 0%;
+    
+    .contenedorRedesFooter{
+
+        img{
+            @include estiloRedes;
+        }
+    }
+    
+    .copyRight{
+        text-align: center;
+      
+    }
+}
+
+
+
+/*******************************************
+* FIN ESTILOS DE FOOTER
+*******************************************/
+
+/*******************************************
+* COMIENZA RESPONSIVE A 580px:
+*******************************************/
+
+
+@media (max-width: 580px){
+
+    header{
+        background-color: $colorGris;
+        .logo{
+            width: 100%;
+        }
+        
+        .active{
+            color: $colorRojo !important;
+            font-weight: 700;
+        }
+    
+        .menu{
+            ul{
+                li{
+                    a{
+                        text-align: center;
+                    }
+                }
+            }
+        } 
+    
+        .contenedorRedesHeader {
+            text-align: center;
+           
+            h3{
+                font-size: 1.5rem;
+                margin-top: 8%;
+            }
+            img{
+                margin: 0% 3% 0% 3%;
+                @include estiloRedes;
+            }
+        }
+    }
+    
+/*******************************************
+* COMIENZA ESTILOS DEL INDEX.
+*******************************************/
+
+
+.fondoSection{
+    background-size: 194vh;
+    height: 100vh;
+    background-color: $colorRojo;
+    background-position-x: 19%;
+
+    h1{
+        transform: translateY(10rem);
+        animation:forwards;
+        animation-name: entraTexto;
+        animation-duration: 4s;
+        animation-timing-function: ease-in-out;
+    }
+    
+    
+    @keyframes entraTexto {
+        0% {transform: translateY(-15rem);}
+        100% {transform: translateY(8rem); color:$colorBlanco;}
+      }
+    
+
+}
+
+/*******************************************
+* FIN ESTILOS DEL INDEX.
+*******************************************/
+
+/*******************************************
+* COMIENZA ESTILOS DE SOBRE MI:
+*******************************************/
+.padreContenedorSobreMi{
+
+    
+    .contenedorSobreMi{
+
+    
+        img{
+            width: 100%;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+    
+        div{
+            width: 100%;
+            padding: 5%;
+        }
+    
+        h3{
+            font-size: 2rem;
+        }
+    
+        p{
+            font-size: 1.2rem;
+        }
+    }
+    
+    }
+    
+    /*******************************************
+    * FIN ESTILOS DE SOBRE MI.
+    *******************************************/
+    
+
+/*******************************************
+* COMIENZA ESTILOS DEL PEDIDOS:
+*******************************************/
+
+.contenedorPedidos {
+
+    form{
+        width: 100%;
+        margin: 3% auto;
+        padding: 1%;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        border: dotted 3px $colorRojo;
+        border-radius: 1rem;
+
+        .contenedorInfo{ 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            label{ 
+                font-weight: 700;
+                
+            }
+
+            input{ 
+                margin-bottom: 20%;
+                
+            }
+            
+        }
+
+        .contenedoBoton{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        
+            input{
+                margin-top: 5%;
+                padding: 0.5% 2% 0.5% 2%;
+                background-color: $colorRojo !important;
+                color: $colorBlanco !important;
+                @include Botones;
+            }
+        }
+    
+    }
+
+    h2{
+       @include encabezadoSecciones;
+    }
+
+    p{
+        width: 100%;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+}
+
+
+#fechaGrid{
+    width: 90%;
+    display: grid;
+    text-align: center;
+    border-radius: 1rem;
+
+    h3{
+        width: 100%;
+    }
+
+    h4{
+        display: none;
+     }
+
+    h5{
+    display: inline;
+    padding: 0;
+    margin:0;
+    align-self: center;
+    color: $colorBlanco;
+    }
+
+     span{
+        width:100%;
+        height: 3rem;
+        background-color: $colorBlancoHumo;
+        border-radius: 0.5rem;
+        cursor: pointer;
+    }
+
+    
+}
+
+
+.contenedorPrecios{
+    width: 100%;
+    margin: 2% auto;
+    display: grid;
+    justify-content: center;
+    align-items: stretch;
+    grid-template-columns: 1fr ;
+    grid-template-rows: auto ;
+    row-gap: 1%;
+    column-gap: 0.5%;
+    padding: 0%;
+
+    h3{
+        
+        justify-self: center;
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+
+    div{
+        
+        h4{
+            height: 3rem;
+            font-size: 0.9rem;
+            color: $colorBlanco;
+            background-color: $colorRojo;
+            align-self: stretch;
+            text-align: center;
+            padding: 1%;
+        }
+
+        span{
+            height: 4rem;
+            font-size: 0.9rem;
+            font-weight: 700;
+            padding: 0% 0% 0% 0%;
+            margin-top: 0.3em;
+            text-align: center;
+        }
+
+        .rowGrey{
+            background-color: $colorGris;
+        }
+        
+        .rowOrange{
+            background-color: $colorRojo;
+            color: $colorBlanco;
+        }
+        
+        
+    }
+}
+
+/*******************************************
+* FIN ESTILOS DEL PEDIDOS.
+*******************************************/
+
+/*******************************************
+* COMIENZA ESTILOS DE PATRONES:
+*******************************************/
+
+.contenedorPatrones{
+
+    h2{
+        @include encabezadoSecciones;        
+    }
+
+
+
+    p{
+        width: 90%;
+        text-align: center;
+    }
+    
+
+
+.hijoContenedorPatrones{
+    width: 90%;
+    margin: 2% 0% 8% 0%;
+
+    h3{
+        font-size: 1.5rem;
+        padding: 1.5%;
+       
+    }
+
+    p{
+        font-size: 1.3rem;
+        color: $colorBlanco;
+        font-weight:400;
+        font-style: italic;
+        padding: 1% 0% 2% 0%;
+    }
+
+    .precioPatrones{
+        display: flex;
+        width:30%;
+        flex-direction: column;
+        text-align: center;
+        padding: 1%;
+        border-top: solid 2px $colorBlanco;
+        border-bottom: solid 2px $colorBlanco;
+
+        span{
+
+            font-weight: 900;
+            color: $colorBlanco;
+            padding: 1%;
+        }
+    }
+
+    button{
+        margin-top: 5%;
+        padding: 2%;
+        @include Botones;
+    
+    }
+
+    button:hover{
+        cursor: pointer;
+        animation: forwards;
+        animation-name: botonAnimación;
+        animation-duration: 3s;
+    }
+    
+    @keyframes botonAnimación{
+        0%{ transform: rotate(0deg); width:30%;}
+        25%{ transform: rotate(8deg); width:35%}
+        75%{ transform: rotate(-8deg); width:35%;}
+        100%{ transform: rotate(0deg); width:30%;}
+    }
+    
+}
+}
+
+/*******************************************
+* FIN ESTILOS DE PATRONES:
+*******************************************/
+
+
+/*******************************************
+* COMIENZA ESTILOS DEL FOOTER:
+*******************************************/
+
+footer{
+    text-align: center;
+
+    address{
+        font-size: 1.2rem;
+    }
+    
+    .contenedorRedesFooter{
+
+        img{
+            display: block;
+            margin: auto;
+            @include estiloRedes;
+            padding-bottom: 2%;
+        }
+    }
+    
+    .copyRight{
+        font-size: 1.5rem;
+        font-style: italic;
+        margin: 1% 0% 8% 0%;
+    }
+}
+
+/*******************************************
+* FIN ESTILOS DE FOOTER
+*******************************************/
+
+}
+
+/*******************************************
+* FIN RESPONSIVE A 580px:
+*******************************************/

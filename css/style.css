@@ -1,0 +1,1123 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@300;400;500&display=swap");
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+/*******************************************
+* COMIENZA ESTILOS DEL HEADER:
+*******************************************/
+header {
+  background-color: #d3d3d3;
+  padding-left: 10%;
+}
+
+header .logo {
+  width: 100%;
+}
+
+header .menu {
+  padding-left: 10%;
+}
+
+header .menu ul li .active {
+  color: firebrick !important;
+  font-weight: 700;
+}
+
+header .menu ul li a {
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0% 1% 0% 1%;
+  list-style: none;
+  color: black;
+  font-size: 1.6rem;
+}
+
+header .menu ul li a:hover {
+  color: firebrick !important;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+header .contenedorRedesHeader h3 {
+  font-size: 1rem;
+}
+
+header .contenedorRedesHeader img {
+  width: 15%;
+  cursor: pointer;
+}
+
+/*******************************************
+* FIN ESTILOS DE HEADER
+*******************************************/
+/*******************************************
+* COMIENZA ESTILOS DEL INDEX.
+*******************************************/
+.fondoSection {
+  background-image: url("../img/index/fondo.png");
+  background-repeat: no-repeat;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  overflow: hidden;
+}
+
+.fondoSection h1 {
+  font-family: "Roboto Slab", serif;
+  font-size: 3rem;
+  color: transparent;
+  -webkit-transform: translateX(28rem);
+          transform: translateX(28rem);
+  -webkit-animation: forwards;
+          animation: forwards;
+  -webkit-animation-name: entraTexto;
+          animation-name: entraTexto;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes entraTexto {
+  0% {
+    -webkit-transform: translateX(28rem);
+            transform: translateX(28rem);
+  }
+  50% {
+    -webkit-transform: translateX(-5rem);
+            transform: translateX(-5rem);
+  }
+  100% {
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+    color: firebrick;
+  }
+}
+
+@keyframes entraTexto {
+  0% {
+    -webkit-transform: translateX(28rem);
+            transform: translateX(28rem);
+  }
+  50% {
+    -webkit-transform: translateX(-5rem);
+            transform: translateX(-5rem);
+  }
+  100% {
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+    color: firebrick;
+  }
+}
+
+.contenedorDestacado {
+  margin: 2% 0% 2% 0%;
+}
+
+.contenedorDestacado h2 {
+  width: 100%;
+  margin: 3% 0% 0% 0%;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Roboto Slab", serif;
+  color: firebrick;
+}
+
+.contenedorDestacado .contenedorImgDestacado {
+  text-align: center;
+}
+
+.contenedorDestacado .contenedorImgDestacado img {
+  width: 80%;
+  border-radius: 50%;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  cursor: pointer;
+}
+
+.contenedorDestacado .contenedorImgDestacado img:hover {
+  width: 90%;
+}
+
+.contenedorDestacado .contenedorImgDestacado p {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: firebrick;
+}
+
+/*******************************************
+* FIN ESTILOS DEL INDEX.
+*******************************************/
+/*******************************************
+* COMIENZA ESTILOS DE SOBRE MI:
+*******************************************/
+.padreContenedorSobreMi h2 {
+  width: 100%;
+  margin: 3% 0% 0% 0%;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Roboto Slab", serif;
+  color: firebrick;
+}
+
+.padreContenedorSobreMi .contenedorSobreMi {
+  width: 90%;
+  margin: 3% auto;
+  padding: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: firebrick;
+  border-radius: 1rem;
+}
+
+.padreContenedorSobreMi .contenedorSobreMi img {
+  width: 50%;
+}
+
+.padreContenedorSobreMi .contenedorSobreMi div {
+  width: 50%;
+  padding: 5%;
+}
+
+.padreContenedorSobreMi .contenedorSobreMi h3 {
+  color: white;
+  text-align: center;
+  font-weight: 900;
+}
+
+.padreContenedorSobreMi .contenedorSobreMi p {
+  color: white;
+  text-align: justify;
+}
+
+/*******************************************
+* FIN ESTILOS DE SOBRE MI.
+*******************************************/
+/*******************************************
+* COMIENZA ESTILOS DEL PEDIDOS:
+*******************************************/
+.contenedorPedidos form {
+  width: 80%;
+  margin: 3% auto;
+  padding: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border: dotted 3px firebrick;
+  border-radius: 1rem;
+}
+
+.contenedorPedidos form .contenedorInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contenedorPedidos form .contenedorInfo label {
+  font-weight: 700;
+}
+
+.contenedorPedidos form .contenedorInfo input {
+  margin-bottom: 20%;
+}
+
+.contenedorPedidos form .contenedoBoton {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.contenedorPedidos form .contenedoBoton input {
+  margin-top: 5%;
+  padding: 0.5% 2% 0.5% 2%;
+  background-color: firebrick !important;
+  color: white !important;
+  background-color: white;
+  border: none;
+  color: firebrick;
+  border-radius: 5rem;
+  font-size: 1.2rem;
+  font-weight: 900;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+
+.contenedorPedidos h2 {
+  width: 100%;
+  margin: 3% 0% 0% 0%;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Roboto Slab", serif;
+  color: firebrick;
+}
+
+.contenedorPedidos p {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+#fechaGrid {
+  text-align: center;
+  background-color: firebrick;
+  border-radius: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -webkit-column-gap: 1%;
+          column-gap: 1%;
+  row-gap: 1%;
+  padding: 4% 1% 4% 1%;
+}
+
+#fechaGrid h3 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: white;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 8;
+}
+
+#fechaGrid h4 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: white;
+}
+
+#fechaGrid h5 {
+  display: none;
+}
+
+#fechaGrid span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 4rem;
+  background-color: whitesmoke;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+#fechaGrid span:hover {
+  background-color: orange;
+}
+
+.contenedorPrecios {
+  width: 60%;
+  margin: 2% auto;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  row-gap: 2%;
+  padding: 1%;
+}
+
+.contenedorPrecios h3 {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+.contenedorPrecios div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contenedorPrecios div h4 {
+  font-size: 1rem;
+  color: white;
+  background-color: firebrick;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  text-align: center;
+  padding: 1%;
+}
+
+.contenedorPrecios div span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2% 0% 2% 5%;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.contenedorPrecios div .rowGrey {
+  background-color: #d3d3d3;
+}
+
+.contenedorPrecios div .rowOrange {
+  background-color: firebrick;
+  color: white;
+}
+
+/*******************************************
+* FIN ESTILOS DEL PEDIDOS.
+*******************************************/
+/*******************************************
+* COMIENZA ESTILOS DE PATRONES:
+*******************************************/
+.contenedorPatrones {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contenedorPatrones h2 {
+  width: 100%;
+  margin: 3% 0% 0% 0%;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Roboto Slab", serif;
+  color: firebrick;
+}
+
+.contenedorPatrones .hijoContenedorPatrones {
+  background-color: firebrick;
+  padding: 1% 0% 1% 0%;
+  margin-bottom: 2%;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 10px 10px 28px -13px rgba(0, 0, 0, 0.9);
+  box-shadow: 10px 10px 28px -13px rgba(0, 0, 0, 0.9);
+}
+
+.contenedorPatrones .hijoContenedorPatrones img {
+  width: 90%;
+  border: solid 5px white;
+  border-radius: 50%;
+}
+
+.contenedorPatrones .hijoContenedorPatrones h3 {
+  margin-top: 3%;
+  padding: 2%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "Roboto Slab", serif;
+  color: firebrick;
+  background-color: white;
+  border-radius: 5rem;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.contenedorPatrones .hijoContenedorPatrones p {
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 400;
+  font-style: italic;
+  padding: 1% 0% 2% 0%;
+}
+
+.contenedorPatrones .hijoContenedorPatrones .precioPatrones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 1%;
+  border-top: solid 2px white;
+  border-bottom: solid 2px white;
+}
+
+.contenedorPatrones .hijoContenedorPatrones .precioPatrones span {
+  font-weight: 900;
+  color: white;
+  padding: 1%;
+}
+
+.contenedorPatrones .hijoContenedorPatrones button {
+  margin-top: 5%;
+  padding: 2%;
+  background-color: white;
+  border: none;
+  color: firebrick;
+  border-radius: 5rem;
+  font-size: 1.2rem;
+  font-weight: 900;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+
+.contenedorPatrones .hijoContenedorPatrones button:hover {
+  cursor: pointer;
+  -webkit-animation: forwards;
+          animation: forwards;
+  -webkit-animation-name: botonAnimación;
+          animation-name: botonAnimación;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+@-webkit-keyframes botonAnimación {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    width: 40%;
+  }
+  25% {
+    -webkit-transform: rotate(8deg);
+            transform: rotate(8deg);
+    width: 45%;
+  }
+  75% {
+    -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg);
+    width: 45%;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    width: 40%;
+  }
+}
+
+@keyframes botonAnimación {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    width: 40%;
+  }
+  25% {
+    -webkit-transform: rotate(8deg);
+            transform: rotate(8deg);
+    width: 45%;
+  }
+  75% {
+    -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg);
+    width: 45%;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    width: 40%;
+  }
+}
+
+/*******************************************
+* FIN ESTILOS DE PATRONES:
+*******************************************/
+/*******************************************
+* COMIENZA ESTILOS DEL CONTACTO:
+*******************************************/
+.contenedorFormulario {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contenedorFormulario h2 {
+  width: 100%;
+  margin: 3% 0% 0% 0%;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Roboto Slab", serif;
+  color: firebrick;
+}
+
+.contenedorFormulario form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
+  padding: 1%;
+  margin: 4%;
+  background-color: firebrick;
+  position: relative;
+  font-weight: 700;
+  color: white;
+  border-radius: 1rem;
+}
+
+.contenedorFormulario form div {
+  width: 70%;
+}
+
+.contenedorFormulario form div label {
+  position: absolute;
+}
+
+.contenedorFormulario form div input[type=text], .contenedorFormulario form div input[type=email], .contenedorFormulario form div select {
+  width: 100%;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  margin: 5% 0% 5% 0%;
+  border-bottom: solid 2px white;
+  background: transparent;
+}
+
+.contenedorFormulario form div select option {
+  background-color: firebrick;
+}
+
+.contenedorFormulario form div textarea {
+  width: 100%;
+  margin: 3% 0% 3% 0%;
+  font-size: 1rem;
+}
+
+.contenedorFormulario form .botonForm {
+  margin: 3% 0% 3% 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contenedorFormulario form .botonForm input {
+  width: 40%;
+  padding: 1% 3% 1% 3%;
+  background-color: white;
+  border: none;
+  color: firebrick;
+  border-radius: 5rem;
+  font-size: 1.2rem;
+  font-weight: 900;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+
+/*******************************************
+* FIN ESTILOS DEL CONTACTO.
+*******************************************/
+/*******************************************
+* COMIENZA ESTILOS DEL FOOTER:
+*******************************************/
+footer {
+  background-color: #d3d3d3;
+  padding: 1% 0% 0.5% 0%;
+}
+
+footer .contenedorRedesFooter img {
+  width: 15%;
+  cursor: pointer;
+}
+
+footer .copyRight {
+  text-align: center;
+}
+
+/*******************************************
+* FIN ESTILOS DE FOOTER
+*******************************************/
+/*******************************************
+* COMIENZA RESPONSIVE A 580px:
+*******************************************/
+@media (max-width: 580px) {
+  header {
+    background-color: #d3d3d3;
+  }
+  header .logo {
+    width: 100%;
+  }
+  header .active {
+    color: firebrick !important;
+    font-weight: 700;
+  }
+  header .menu ul li a {
+    text-align: center;
+  }
+  header .contenedorRedesHeader {
+    text-align: center;
+  }
+  header .contenedorRedesHeader h3 {
+    font-size: 1.5rem;
+    margin-top: 8%;
+  }
+  header .contenedorRedesHeader img {
+    margin: 0% 3% 0% 3%;
+    width: 15%;
+    cursor: pointer;
+  }
+  /*******************************************
+* COMIENZA ESTILOS DEL INDEX.
+*******************************************/
+  .fondoSection {
+    background-size: 194vh;
+    height: 100vh;
+    background-color: firebrick;
+    background-position-x: 19%;
+  }
+  .fondoSection h1 {
+    -webkit-transform: translateY(10rem);
+            transform: translateY(10rem);
+    -webkit-animation: forwards;
+            animation: forwards;
+    -webkit-animation-name: entraTexto;
+            animation-name: entraTexto;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+  }
+  @-webkit-keyframes entraTexto {
+    0% {
+      -webkit-transform: translateY(-15rem);
+              transform: translateY(-15rem);
+    }
+    100% {
+      -webkit-transform: translateY(8rem);
+              transform: translateY(8rem);
+      color: white;
+    }
+  }
+  @keyframes entraTexto {
+    0% {
+      -webkit-transform: translateY(-15rem);
+              transform: translateY(-15rem);
+    }
+    100% {
+      -webkit-transform: translateY(8rem);
+              transform: translateY(8rem);
+      color: white;
+    }
+  }
+  /*******************************************
+* FIN ESTILOS DEL INDEX.
+*******************************************/
+  /*******************************************
+* COMIENZA ESTILOS DE SOBRE MI:
+*******************************************/
+  .padreContenedorSobreMi .contenedorSobreMi img {
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .padreContenedorSobreMi .contenedorSobreMi div {
+    width: 100%;
+    padding: 5%;
+  }
+  .padreContenedorSobreMi .contenedorSobreMi h3 {
+    font-size: 2rem;
+  }
+  .padreContenedorSobreMi .contenedorSobreMi p {
+    font-size: 1.2rem;
+  }
+  /*******************************************
+    * FIN ESTILOS DE SOBRE MI.
+    *******************************************/
+  /*******************************************
+* COMIENZA ESTILOS DEL PEDIDOS:
+*******************************************/
+  .contenedorPedidos form {
+    width: 100%;
+    margin: 3% auto;
+    padding: 1%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    border: dotted 3px firebrick;
+    border-radius: 1rem;
+  }
+  .contenedorPedidos form .contenedorInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contenedorPedidos form .contenedorInfo label {
+    font-weight: 700;
+  }
+  .contenedorPedidos form .contenedorInfo input {
+    margin-bottom: 20%;
+  }
+  .contenedorPedidos form .contenedoBoton {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .contenedorPedidos form .contenedoBoton input {
+    margin-top: 5%;
+    padding: 0.5% 2% 0.5% 2%;
+    background-color: firebrick !important;
+    color: white !important;
+    background-color: white;
+    border: none;
+    color: firebrick;
+    border-radius: 5rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+  }
+  .contenedorPedidos h2 {
+    width: 100%;
+    margin: 3% 0% 0% 0%;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Roboto Slab", serif;
+    color: firebrick;
+  }
+  .contenedorPedidos p {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  #fechaGrid {
+    width: 90%;
+    display: -ms-grid;
+    display: grid;
+    text-align: center;
+    border-radius: 1rem;
+  }
+  #fechaGrid h3 {
+    width: 100%;
+  }
+  #fechaGrid h4 {
+    display: none;
+  }
+  #fechaGrid h5 {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    color: white;
+  }
+  #fechaGrid span {
+    width: 100%;
+    height: 3rem;
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  .contenedorPrecios {
+    width: 100%;
+    margin: 2% auto;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    row-gap: 1%;
+    -webkit-column-gap: 0.5%;
+            column-gap: 0.5%;
+    padding: 0%;
+  }
+  .contenedorPrecios h3 {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  .contenedorPrecios div h4 {
+    height: 3rem;
+    font-size: 0.9rem;
+    color: white;
+    background-color: firebrick;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+    text-align: center;
+    padding: 1%;
+  }
+  .contenedorPrecios div span {
+    height: 4rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 0% 0% 0% 0%;
+    margin-top: 0.3em;
+    text-align: center;
+  }
+  .contenedorPrecios div .rowGrey {
+    background-color: #d3d3d3;
+  }
+  .contenedorPrecios div .rowOrange {
+    background-color: firebrick;
+    color: white;
+  }
+  /*******************************************
+* FIN ESTILOS DEL PEDIDOS.
+*******************************************/
+  /*******************************************
+* COMIENZA ESTILOS DE PATRONES:
+*******************************************/
+  .contenedorPatrones h2 {
+    width: 100%;
+    margin: 3% 0% 0% 0%;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Roboto Slab", serif;
+    color: firebrick;
+  }
+  .contenedorPatrones p {
+    width: 90%;
+    text-align: center;
+  }
+  .contenedorPatrones .hijoContenedorPatrones {
+    width: 90%;
+    margin: 2% 0% 8% 0%;
+  }
+  .contenedorPatrones .hijoContenedorPatrones h3 {
+    font-size: 1.5rem;
+    padding: 1.5%;
+  }
+  .contenedorPatrones .hijoContenedorPatrones p {
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 400;
+    font-style: italic;
+    padding: 1% 0% 2% 0%;
+  }
+  .contenedorPatrones .hijoContenedorPatrones .precioPatrones {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 30%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    padding: 1%;
+    border-top: solid 2px white;
+    border-bottom: solid 2px white;
+  }
+  .contenedorPatrones .hijoContenedorPatrones .precioPatrones span {
+    font-weight: 900;
+    color: white;
+    padding: 1%;
+  }
+  .contenedorPatrones .hijoContenedorPatrones button {
+    margin-top: 5%;
+    padding: 2%;
+    background-color: white;
+    border: none;
+    color: firebrick;
+    border-radius: 5rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+  }
+  .contenedorPatrones .hijoContenedorPatrones button:hover {
+    cursor: pointer;
+    -webkit-animation: forwards;
+            animation: forwards;
+    -webkit-animation-name: botonAnimación;
+            animation-name: botonAnimación;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+  }
+  @-webkit-keyframes botonAnimación {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      width: 30%;
+    }
+    25% {
+      -webkit-transform: rotate(8deg);
+              transform: rotate(8deg);
+      width: 35%;
+    }
+    75% {
+      -webkit-transform: rotate(-8deg);
+              transform: rotate(-8deg);
+      width: 35%;
+    }
+    100% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      width: 30%;
+    }
+  }
+  @keyframes botonAnimación {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      width: 30%;
+    }
+    25% {
+      -webkit-transform: rotate(8deg);
+              transform: rotate(8deg);
+      width: 35%;
+    }
+    75% {
+      -webkit-transform: rotate(-8deg);
+              transform: rotate(-8deg);
+      width: 35%;
+    }
+    100% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      width: 30%;
+    }
+  }
+  /*******************************************
+* FIN ESTILOS DE PATRONES:
+*******************************************/
+  /*******************************************
+* COMIENZA ESTILOS DEL FOOTER:
+*******************************************/
+  footer {
+    text-align: center;
+  }
+  footer address {
+    font-size: 1.2rem;
+  }
+  footer .contenedorRedesFooter img {
+    display: block;
+    margin: auto;
+    width: 15%;
+    cursor: pointer;
+    padding-bottom: 2%;
+  }
+  footer .copyRight {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin: 1% 0% 8% 0%;
+  }
+  /*******************************************
+* FIN ESTILOS DE FOOTER
+*******************************************/
+}
+
+/*******************************************
+* FIN RESPONSIVE A 580px:
+*******************************************/
+/*# sourceMappingURL=style.css.map */
