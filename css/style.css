@@ -13,7 +13,15 @@ header {
 }
 
 header .logo {
+  display: block;
+}
+
+header .logo img {
   width: 100%;
+}
+
+header .logo-m {
+  display: none;
 }
 
 header .menu {
@@ -134,27 +142,55 @@ header .contenedorRedesHeader img {
 }
 
 .contenedorDestacado .contenedorImgDestacado {
-  text-align: center;
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .contenedorDestacado .contenedorImgDestacado img {
-  width: 80%;
+  display: block;
+  width: 90%;
   border-radius: 50%;
-  -webkit-transition: width 0.5s;
-  transition: width 0.5s;
-  -webkit-transition-timing-function: ease-in;
-          transition-timing-function: ease-in;
+  height: auto;
+}
+
+.contenedorDestacado .contenedorImgDestacado div {
+  width: 90%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  background-color: rgba(178, 34, 34, 0.5);
+  border-radius: 50%;
   cursor: pointer;
 }
 
-.contenedorDestacado .contenedorImgDestacado img:hover {
-  width: 90%;
-}
-
-.contenedorDestacado .contenedorImgDestacado p {
+.contenedorDestacado .contenedorImgDestacado div p {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   font-weight: 700;
   font-size: 1.5rem;
-  color: firebrick;
+  text-align: center;
+}
+
+.contenedorDestacado .contenedorImgDestacado:hover img {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+
+.contenedorDestacado .contenedorImgDestacado:hover div {
+  opacity: 1;
 }
 
 /*******************************************
@@ -704,8 +740,12 @@ footer {
   padding: 1% 0% 0.5% 0%;
 }
 
+footer .contenedorRedesFooter h3 {
+  font-size: 1rem;
+}
+
 footer .contenedorRedesFooter img {
-  width: 15%;
+  width: 10%;
   cursor: pointer;
 }
 
@@ -722,9 +762,25 @@ footer .copyRight {
 @media (max-width: 580px) {
   header {
     background-color: #d3d3d3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   header .logo {
-    width: 100%;
+    display: none;
+  }
+  header .logo-m {
+    display: block;
+  }
+  header .logo-m img {
+    width: 70%;
   }
   header .active {
     color: firebrick !important;
@@ -742,7 +798,6 @@ footer .copyRight {
   }
   header .contenedorRedesHeader img {
     margin: 0% 3% 0% 3%;
-    width: 15%;
     cursor: pointer;
   }
   /*******************************************
@@ -755,6 +810,7 @@ footer .copyRight {
     background-position-x: 19%;
   }
   .fondoSection h1 {
+    text-align: center;
     -webkit-transform: translateY(10rem);
             transform: translateY(10rem);
     -webkit-animation: forwards;
@@ -787,6 +843,45 @@ footer .copyRight {
               transform: translateY(8rem);
       color: white;
     }
+  }
+  .contenedorDestacado .contenedorImgDestacado {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .contenedorDestacado .contenedorImgDestacado img {
+    display: block;
+    width: 100%;
+    border-radius: 50%;
+    height: auto;
+  }
+  .contenedorDestacado .contenedorImgDestacado div {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    opacity: 1;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .contenedorDestacado .contenedorImgDestacado div p {
+    color: firebrick;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
   }
   /*******************************************
 * FIN ESTILOS DEL INDEX.
@@ -849,7 +944,7 @@ footer .copyRight {
     font-weight: 700;
   }
   .contenedorPedidos form .contenedorInfo input {
-    margin-bottom: 20%;
+    padding: 1% 5% 1% 5%;
   }
   .contenedorPedidos form .contenedoBoton {
     width: 100%;
@@ -890,6 +985,8 @@ footer .copyRight {
   }
   #fechaGrid {
     width: 90%;
+    height: 100%;
+    padding: 6% 2% 11% 2%;
     display: -ms-grid;
     display: grid;
     text-align: center;
@@ -1092,6 +1189,83 @@ footer .copyRight {
 * FIN ESTILOS DE PATRONES:
 *******************************************/
   /*******************************************
+* COMIENZA ESTILOS DEL CONTACTO:
+*******************************************/
+  .contenedorFormulario {
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contenedorFormulario h2 {
+    width: 100%;
+    margin: 3% 0% 0% 0%;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Roboto Slab", serif;
+    color: firebrick;
+  }
+  .contenedorFormulario form {
+    width: 90%;
+    padding: 2%;
+  }
+  .contenedorFormulario form div {
+    width: 90%;
+  }
+  .contenedorFormulario form div input[type=text], .contenedorFormulario form div input[type=email], .contenedorFormulario form div select {
+    width: 100%;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    margin: 5% 0% 5% 0%;
+    border-bottom: solid 2px white;
+    background: transparent;
+  }
+  .contenedorFormulario form div select option {
+    background-color: firebrick;
+  }
+  .contenedorFormulario form div textarea {
+    width: 100%;
+    margin: 3% 0% 3% 0%;
+    font-size: 1rem;
+  }
+  .contenedorFormulario form .botonForm {
+    margin: 3% 0% 3% 0%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    text-align: center;
+  }
+  .contenedorFormulario form .botonForm input {
+    width: 45%;
+    padding: 1% 5% 1% 5%;
+    background-color: white;
+    border: none;
+    color: firebrick;
+    border-radius: 5rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+  }
+  /*******************************************
+* FIN ESTILOS DEL CONTACTO.
+*******************************************/
+  /*******************************************
 * COMIENZA ESTILOS DEL FOOTER:
 *******************************************/
   footer {
@@ -1100,10 +1274,13 @@ footer .copyRight {
   footer address {
     font-size: 1.2rem;
   }
+  footer .contenedorRedesFooter h3 {
+    font-size: 1.5rem;
+  }
   footer .contenedorRedesFooter img {
     display: block;
-    margin: auto;
     width: 15%;
+    margin: auto;
     cursor: pointer;
     padding-bottom: 2%;
   }

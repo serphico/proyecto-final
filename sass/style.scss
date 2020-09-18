@@ -16,7 +16,6 @@ $robotoS: 'Roboto Slab', serif;
 //mixins 
 
 @mixin estiloRedes {
-    width: 15%;
     cursor: pointer;
 }
 
@@ -55,8 +54,18 @@ html{
 header{
     background-color: $colorGris;
     padding-left: 10%;
+
     .logo{
-        width: 100%;
+
+        display: block;
+        img{
+            width: 100%;
+        }
+        
+    }
+
+    .logo-m{
+        display: none;
     }
     
     .menu{
@@ -91,6 +100,7 @@ header{
             font-size: 1rem;
         }
         img{
+            width: 15%;
             @include estiloRedes;
         }
     }
@@ -141,26 +151,60 @@ header{
     }
 
     .contenedorImgDestacado {
-        text-align: center;
+        position: relative;
+        width: 50%;
+        margin: 0 auto;
+        padding: 0;
     
         img{
-            width: 80%;
-            border-radius: 50%;
-            transition: width 0.5s;
-            transition-timing-function: ease-in;
-            cursor: pointer;
-        }
-    
-        img:hover{
+            display: block;
             width: 90%;
+            border-radius: 50%;
+            height: auto;
+            
         }
     
-        p{
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: $colorRojo;
+
+        div{
+            width: 90%;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: rgba(178, 34, 34,0.5);
+            border-radius: 50%;
+            cursor: pointer;
+
+            p{            
+                color: $colorBlanco;
+                font-size: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                font-weight: 700;
+                font-size: 1.5rem;
+                text-align: center;
+               
+            }
         }
+    
+
         
+    }
+
+    .contenedorImgDestacado:hover  img{
+        filter: blur(5px);
+    }
+
+    .contenedorImgDestacado:hover  div{
+        opacity: 1;
     }
 }
 
@@ -581,8 +625,12 @@ footer{
     padding: 1% 0% 0.5% 0%;
     
     .contenedorRedesFooter{
+        h3{
+            font-size: 1rem;
+        }
 
         img{
+            width: 10%;
             @include estiloRedes;
         }
     }
@@ -608,8 +656,21 @@ footer{
 
     header{
         background-color: $colorGris;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
         .logo{
-            width: 100%;
+            display: none;
+        }
+
+        .logo-m{
+            display: block;
+            img{
+                width: 70%;
+
+            }
+            
         }
         
         .active{
@@ -653,6 +714,7 @@ footer{
     background-position-x: 19%;
 
     h1{
+        text-align: center;
         transform: translateY(10rem);
         animation:forwards;
         animation-name: entraTexto;
@@ -668,6 +730,61 @@ footer{
     
 
 }
+
+.contenedorDestacado {
+
+    .contenedorImgDestacado {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    
+        img{
+            display: block;
+            width: 100%;
+            border-radius: 50%;
+            height: auto;
+            
+        }
+    
+
+        div{
+            width: 100%;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+            opacity: 1;
+            transition: .5s ease;
+            background-color: rgba(255, 255, 255,0.3);
+            border-radius: 50%;
+            cursor: pointer;
+
+            p{            
+                color: $colorRojo;
+                font-size: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                font-weight: 700;
+                font-size: 1.5rem;
+                text-align: center;
+               
+            }
+        }
+    
+
+        
+    }
+
+}
+
+
 
 /*******************************************
 * FIN ESTILOS DEL INDEX.
@@ -737,8 +854,8 @@ footer{
             }
 
             input{ 
-                margin-bottom: 20%;
                 
+                padding: 1% 5% 1% 5%;
             }
             
         }
@@ -774,6 +891,8 @@ footer{
 
 #fechaGrid{
     width: 90%;
+    height: 100%;
+    padding: 6% 2% 11% 2%;
     display: grid;
     text-align: center;
     border-radius: 1rem;
@@ -945,6 +1064,79 @@ footer{
 * FIN ESTILOS DE PATRONES:
 *******************************************/
 
+/*******************************************
+* COMIENZA ESTILOS DEL CONTACTO:
+*******************************************/
+
+.contenedorFormulario{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    h2{
+        @include encabezadoSecciones;
+    }
+
+    form{
+        width: 90%;
+        padding: 2%;
+
+        div{
+            width: 90%;
+
+
+            input[type=text], input[type=email], select{
+                width: 100%;
+                color: $colorBlanco;
+                font-size: 1.2rem;
+                border: none;
+                margin: 5% 0% 5% 0%;
+                border-bottom: solid 2px $colorBlanco;
+                background: transparent;
+            }
+
+            select{
+                option{
+                    background-color: $colorRojo;
+                }
+            }
+
+            textarea{
+                width: 100%;
+                margin: 3% 0% 3% 0%;
+                font-size: 1rem;
+            }
+        
+        }
+
+
+
+
+        .botonForm{
+            margin: 3% 0% 3% 0%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: center;
+
+            input{
+                width: 45%;
+                padding: 1% 5% 1% 5%;
+               @include Botones;
+            }
+        }
+    }
+
+
+    
+}
+
+/*******************************************
+* FIN ESTILOS DEL CONTACTO.
+*******************************************/
+
 
 /*******************************************
 * COMIENZA ESTILOS DEL FOOTER:
@@ -959,8 +1151,13 @@ footer{
     
     .contenedorRedesFooter{
 
+        h3{
+            font-size: 1.5rem;
+        }
+
         img{
             display: block;
+            width: 15%;
             margin: auto;
             @include estiloRedes;
             padding-bottom: 2%;
