@@ -164,8 +164,8 @@ header .contenedorRedesHeader img {
   right: 0;
   position: absolute;
   opacity: 0;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
   background-color: rgba(178, 34, 34, 0.5);
   border-radius: 50%;
   cursor: pointer;
@@ -318,22 +318,7 @@ header .contenedorRedesHeader img {
   cursor: pointer;
 }
 
-.contenedorPedidos h2 {
-  width: 100%;
-  margin: 3% 0% 0% 0%;
-  text-align: center;
-  font-size: 2rem;
-  font-family: "Roboto Slab", serif;
-  color: firebrick;
-}
-
-.contenedorPedidos p {
-  width: 100%;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-#fechaGrid {
+.contenedorPedidos form .contenedorCalendario {
   text-align: center;
   background-color: firebrick;
   border-radius: 1rem;
@@ -351,7 +336,7 @@ header .contenedorRedesHeader img {
   padding: 4% 1% 4% 1%;
 }
 
-#fechaGrid h3 {
+.contenedorPedidos form .contenedorCalendario h3 {
   font-size: 2rem;
   font-weight: 900;
   color: white;
@@ -363,18 +348,18 @@ header .contenedorRedesHeader img {
   grid-column-end: 8;
 }
 
-#fechaGrid h4 {
+.contenedorPedidos form .contenedorCalendario h4 {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   color: white;
 }
 
-#fechaGrid h5 {
+.contenedorPedidos form .contenedorCalendario h5 {
   display: none;
 }
 
-#fechaGrid span {
+.contenedorPedidos form .contenedorCalendario span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -390,8 +375,23 @@ header .contenedorRedesHeader img {
   cursor: pointer;
 }
 
-#fechaGrid span:hover {
+.contenedorPedidos form .contenedorCalendario span:hover {
   background-color: orange;
+}
+
+.contenedorPedidos h2 {
+  width: 100%;
+  margin: 3% 0% 0% 0%;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Roboto Slab", serif;
+  color: firebrick;
+}
+
+.contenedorPedidos p {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 .contenedorPrecios {
@@ -680,7 +680,9 @@ header .contenedorRedesHeader img {
   position: absolute;
 }
 
-.contenedorFormulario form div input[type=text], .contenedorFormulario form div input[type=email], .contenedorFormulario form div select {
+.contenedorFormulario form div input[type="text"],
+.contenedorFormulario form div input[type="email"],
+.contenedorFormulario form div select {
   width: 100%;
   color: white;
   font-size: 1.2rem;
@@ -762,6 +764,7 @@ footer .copyRight {
 @media (max-width: 580px) {
   header {
     background-color: #d3d3d3;
+    padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -786,6 +789,9 @@ footer .copyRight {
     color: firebrick !important;
     font-weight: 700;
   }
+  header .menu {
+    padding: 0;
+  }
   header .menu ul li a {
     text-align: center;
   }
@@ -797,6 +803,7 @@ footer .copyRight {
     margin-top: 8%;
   }
   header .contenedorRedesHeader img {
+    width: 10%;
     margin: 0% 3% 0% 3%;
     cursor: pointer;
   }
@@ -865,8 +872,8 @@ footer .copyRight {
     right: 0;
     position: absolute;
     opacity: 1;
-    -webkit-transition: .5s ease;
-    transition: .5s ease;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     cursor: pointer;
@@ -946,6 +953,37 @@ footer .copyRight {
   .contenedorPedidos form .contenedorInfo input {
     padding: 1% 5% 1% 5%;
   }
+  .contenedorPedidos form .contenedorCalendario {
+    width: 90%;
+    height: 100%;
+    padding: 6% 2% 11% 2%;
+    display: -ms-grid;
+    display: grid;
+    text-align: center;
+    border-radius: 1rem;
+  }
+  .contenedorPedidos form .contenedorCalendario h3 {
+    width: 100%;
+  }
+  .contenedorPedidos form .contenedorCalendario h4 {
+    display: none;
+  }
+  .contenedorPedidos form .contenedorCalendario h5 {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    color: white;
+  }
+  .contenedorPedidos form .contenedorCalendario span {
+    width: 100%;
+    height: 3rem;
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
   .contenedorPedidos form .contenedoBoton {
     width: 100%;
     display: -webkit-box;
@@ -982,37 +1020,6 @@ footer .copyRight {
     width: 100%;
     text-align: center;
     font-size: 1.2rem;
-  }
-  #fechaGrid {
-    width: 90%;
-    height: 100%;
-    padding: 6% 2% 11% 2%;
-    display: -ms-grid;
-    display: grid;
-    text-align: center;
-    border-radius: 1rem;
-  }
-  #fechaGrid h3 {
-    width: 100%;
-  }
-  #fechaGrid h4 {
-    display: none;
-  }
-  #fechaGrid h5 {
-    display: inline;
-    padding: 0;
-    margin: 0;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    color: white;
-  }
-  #fechaGrid span {
-    width: 100%;
-    height: 3rem;
-    background-color: whitesmoke;
-    border-radius: 0.5rem;
-    cursor: pointer;
   }
   .contenedorPrecios {
     width: 100%;
@@ -1217,7 +1224,9 @@ footer .copyRight {
   .contenedorFormulario form div {
     width: 90%;
   }
-  .contenedorFormulario form div input[type=text], .contenedorFormulario form div input[type=email], .contenedorFormulario form div select {
+  .contenedorFormulario form div input[type="text"],
+  .contenedorFormulario form div input[type="email"],
+  .contenedorFormulario form div select {
     width: 100%;
     color: white;
     font-size: 1.2rem;

@@ -1,363 +1,331 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@300;400;500&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@300;400;500&display=swap");
 
 //Colores
-$colorRojo:firebrick;
-$colorNaranja:orange;
-$colorGris:#d3d3d3;
-$colorBlancoHumo:whitesmoke;
-$colorBlanco:white;
-$colorNegro:black;
+$colorRojo: firebrick;
+$colorNaranja: orange;
+$colorGris: #d3d3d3;
+$colorBlancoHumo: whitesmoke;
+$colorBlanco: white;
+$colorNegro: black;
 
 //Tipografia
-$roboto: 'Roboto', sans-serif;
-$robotoS: 'Roboto Slab', serif;
+$roboto: "Roboto", sans-serif;
+$robotoS: "Roboto Slab", serif;
 
-//mixins 
+//mixins
 
 @mixin estiloRedes {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 @mixin encabezadoSecciones {
-    width: 100%;
-    margin: 3% 0% 0% 0%;
-    text-align: center;
-    font-size: 2rem;
-    font-family: $robotoS;
-    color: $colorRojo;
+  width: 100%;
+  margin: 3% 0% 0% 0%;
+  text-align: center;
+  font-size: 2rem;
+  font-family: $robotoS;
+  color: $colorRojo;
 }
 
-@mixin Botones{
-    background-color: white;
-    border: none;
-    color: $colorRojo;
-    border-radius: 5rem;
-    font-size: 1.2rem;
-    font-weight:900;
-    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-    cursor: pointer;
+@mixin Botones {
+  background-color: white;
+  border: none;
+  color: $colorRojo;
+  border-radius: 5rem;
+  font-size: 1.2rem;
+  font-weight: 900;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
 }
 
-
-
-html{
-    font-family: $roboto;
+html {
+  font-family: $roboto;
 }
 
 /*******************************************
 * COMIENZA ESTILOS DEL HEADER:
 *******************************************/
 
-header{
-    background-color: $colorGris;
+header {
+  background-color: $colorGris;
+  padding-left: 10%;
+
+  .logo {
+    display: block;
+    img {
+      width: 100%;
+    }
+  }
+
+  .logo-m {
+    display: none;
+  }
+
+  .menu {
     padding-left: 10%;
-
-    .logo{
-
-        display: block;
-        img{
-            width: 100%;
+    ul {
+      li {
+        .active {
+          color: $colorRojo !important;
+          font-weight: 700;
         }
-        
+
+        a {
+          text-decoration: none;
+          cursor: pointer;
+          padding: 0% 1% 0% 1%;
+          list-style: none;
+          color: $colorNegro;
+          font-size: 1.6rem;
+        }
+        a:hover {
+          color: $colorRojo !important;
+          font-size: 1.6rem;
+          font-weight: 700;
+          text-align: center;
+        }
+      }
     }
+  }
 
-    .logo-m{
-        display: none;
+  .contenedorRedesHeader {
+    h3 {
+      font-size: 1rem;
     }
-    
-    .menu{
-        padding-left: 10%;
-        ul{
-            li{
-                .active{
-                    color: $colorRojo !important;
-                    font-weight: 700;
-                }
-                
-                a{
-                    text-decoration: none;
-                    cursor: pointer;
-                    padding: 0% 1% 0% 1%;
-                    list-style: none;
-                    color: $colorNegro;
-                    font-size: 1.6rem;
-                }
-                a:hover{
-                    color: $colorRojo !important;
-                    font-size: 1.6rem;
-                    font-weight: 700;
-                    text-align: center;
-                }
-            }
-        }
-    } 
-
-    .contenedorRedesHeader {
-        h3{
-            font-size: 1rem;
-        }
-        img{
-            width: 15%;
-            @include estiloRedes;
-        }
+    img {
+      width: 15%;
+      @include estiloRedes;
     }
+  }
 }
 
 /*******************************************
 * FIN ESTILOS DE HEADER
 *******************************************/
 
-
 /*******************************************
 * COMIENZA ESTILOS DEL INDEX.
 *******************************************/
 
-.fondoSection{
-    background-image: url('../img/index/fondo.png');
-    background-repeat: no-repeat;
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    overflow: hidden;
+.fondoSection {
+  background-image: url("../img/index/fondo.png");
+  background-repeat: no-repeat;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
 
-    h1{
-        font-family: $robotoS;
-        font-size: 3rem;
-        color: transparent;
-        transform: translateX(28rem);
-        animation:forwards;
-        animation-name: entraTexto;
-        animation-duration: 4s;
-        animation-timing-function: ease-in-out;
+  h1 {
+    font-family: $robotoS;
+    font-size: 3rem;
+    color: transparent;
+    transform: translateX(28rem);
+    animation: forwards;
+    animation-name: entraTexto;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes entraTexto {
+    0% {
+      transform: translateX(28rem);
     }
-
-    @keyframes entraTexto {
-        0% {transform: translateX(28rem);}
-        50% {transform: translateX(-5rem);}
-        100% {transform: translateX(0rem); color:$colorRojo;}
-      }
-
+    50% {
+      transform: translateX(-5rem);
+    }
+    100% {
+      transform: translateX(0rem);
+      color: $colorRojo;
+    }
+  }
 }
 
 .contenedorDestacado {
-    margin:2% 0% 2% 0%;
+  margin: 2% 0% 2% 0%;
 
-    h2{
-       @include encabezadoSecciones;
+  h2 {
+    @include encabezadoSecciones;
+  }
+
+  .contenedorImgDestacado {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+
+    img {
+      display: block;
+      width: 90%;
+      border-radius: 50%;
+      height: auto;
     }
 
-    .contenedorImgDestacado {
-        position: relative;
-        width: 50%;
-        margin: 0 auto;
-        padding: 0;
-    
-        img{
-            display: block;
-            width: 90%;
-            border-radius: 50%;
-            height: auto;
-            
-        }
-    
+    div {
+      width: 90%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+      opacity: 0;
+      transition: 0.5s ease;
+      background-color: rgba(178, 34, 34, 0.5);
+      border-radius: 50%;
+      cursor: pointer;
 
-        div{
-            width: 90%;
-            height: 100%;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            position: absolute;
-            opacity: 0;
-            transition: .5s ease;
-            background-color: rgba(178, 34, 34,0.5);
-            border-radius: 50%;
-            cursor: pointer;
-
-            p{            
-                color: $colorBlanco;
-                font-size: 20px;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                -webkit-transform: translate(-50%, -50%);
-                -ms-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-                font-weight: 700;
-                font-size: 1.5rem;
-                text-align: center;
-               
-            }
-        }
-    
-
-        
+      p {
+        color: $colorBlanco;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        font-weight: 700;
+        font-size: 1.5rem;
+        text-align: center;
+      }
     }
+  }
 
-    .contenedorImgDestacado:hover  img{
-        filter: blur(5px);
-    }
+  .contenedorImgDestacado:hover img {
+    filter: blur(5px);
+  }
 
-    .contenedorImgDestacado:hover  div{
-        opacity: 1;
-    }
+  .contenedorImgDestacado:hover div {
+    opacity: 1;
+  }
 }
-
-
 
 /*******************************************
 * FIN ESTILOS DEL INDEX.
 *******************************************/
 
-
 /*******************************************
 * COMIENZA ESTILOS DE SOBRE MI:
 *******************************************/
-.padreContenedorSobreMi{
-
-h2{
+.padreContenedorSobreMi {
+  h2 {
     @include encabezadoSecciones;
-}
+  }
 
-.contenedorSobreMi{
+  .contenedorSobreMi {
     width: 90%;
     margin: 3% auto;
     padding: 2%;
-    display:flex;     
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     background-color: $colorRojo;
     border-radius: 1rem;
 
-    img{
-        width: 50%;
+    img {
+      width: 50%;
     }
 
-    div{
-        width: 50%;
-        padding: 5%;
+    div {
+      width: 50%;
+      padding: 5%;
     }
 
-    h3{
-        color: $colorBlanco;
-        text-align: center;
-        font-weight: 900;
+    h3 {
+      color: $colorBlanco;
+      text-align: center;
+      font-weight: 900;
     }
 
-    p{
-        color: $colorBlanco;
-        text-align: justify;
+    p {
+      color: $colorBlanco;
+      text-align: justify;
     }
-}
-
+  }
 }
 
 /*******************************************
 * FIN ESTILOS DE SOBRE MI.
 *******************************************/
 
-
 /*******************************************
 * COMIENZA ESTILOS DEL PEDIDOS:
 *******************************************/
 
 .contenedorPedidos {
-
-    form{
-        width: 80%;
-        margin: 3% auto;
-        padding: 1%;
-        display:flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        border: dotted 3px $colorRojo;
-        border-radius: 1rem;
-
-        .contenedorInfo{ 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            label{ 
-                font-weight: 700;
-                
-            }
-
-            input{ 
-                margin-bottom: 20%;
-                
-            }
-            
-        }
-
-        .contenedoBoton{
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
-        
-            input{
-                margin-top: 5%;
-                padding: 0.5% 2% 0.5% 2%;
-                background-color: $colorRojo !important;
-                color: $colorBlanco !important;
-                @include Botones;
-            }
-        }
-    
-    }
-
-    h2{
-       @include encabezadoSecciones;
-    }
-
-    p{
-        width: 100%;
-        text-align: center;
-        font-size: 1.2rem;
-    }
-
-}
-
-
-#fechaGrid{
-    text-align: center;
-    background-color: $colorRojo;
+  form {
+    width: 80%;
+    margin: 3% auto;
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: dotted 3px $colorRojo;
     border-radius: 1rem;
-    display: grid;
-    align-content: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    column-gap: 1%;
-    row-gap: 1%;
-    padding: 4% 1% 4% 1%;
 
-    h3{
+    .contenedorInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      label {
+        font-weight: 700;
+      }
+
+      input {
+        margin-bottom: 20%;
+      }
+    }
+
+    .contenedoBoton {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      input {
+        margin-top: 5%;
+        padding: 0.5% 2% 0.5% 2%;
+        background-color: $colorRojo !important;
+        color: $colorBlanco !important;
+        @include Botones;
+      }
+    }
+
+    .contenedorCalendario {
+      text-align: center;
+      background-color: $colorRojo;
+      border-radius: 1rem;
+      display: grid;
+      align-content: center;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      column-gap: 1%;
+      row-gap: 1%;
+      padding: 4% 1% 4% 1%;
+
+      h3 {
         font-size: 2rem;
         font-weight: 900;
         color: $colorBlanco;
         align-self: center;
         grid-column-start: 1;
         grid-column-end: 8;
-    }
+      }
 
-    h4{
+      h4 {
         align-self: center;
         color: $colorBlanco;
-     }
+      }
 
-     h5{
+      h5 {
         display: none;
-     }
+      }
 
-
-     span{
+      span {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -365,64 +333,71 @@ h2{
         background-color: $colorBlancoHumo;
         border-radius: 0.5rem;
         cursor: pointer;
-    }
+      }
 
-    span:hover{
+      span:hover {
         background-color: $colorNaranja;
-    
+      }
     }
-     
+  }
+
+  h2 {
+    @include encabezadoSecciones;
+  }
+
+  p {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+  }
 }
 
+.contenedorPrecios {
+  width: 60%;
+  margin: 2% auto;
+  display: grid;
+  align-items: start;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  row-gap: 2%;
+  padding: 1%;
 
-.contenedorPrecios{
-    width: 60%;
-    margin: 2% auto;
-    display: grid;
-    align-items: start;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
-    grid-template-rows: 1fr ;
-    row-gap: 2%;
-    padding: 1%;
+  h3 {
+    justify-self: center;
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
 
-    h3{
-        justify-self: center;
-        grid-column-start: 1;
-        grid-column-end: 5;
+  div {
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+      font-size: 1rem;
+      color: $colorBlanco;
+      background-color: $colorRojo;
+      align-self: stretch;
+      text-align: center;
+      padding: 1%;
     }
 
-    div{
-        display: flex;
-        flex-direction: column;
-        
-        h4{
-            font-size: 1rem;
-            color: $colorBlanco;
-            background-color: $colorRojo;
-            align-self: stretch;
-            text-align: center;
-            padding: 1%;
-        }
-
-        span{
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 2% 0% 2% 5%;
-            margin-top: 5%;
-            text-align: center;
-        }
-
-        .rowGrey{
-            background-color: $colorGris;
-        }
-        
-        .rowOrange{
-            background-color: $colorRojo;
-            color: $colorBlanco;
-        }
-        
-        
+    span {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 2% 0% 2% 5%;
+      margin-top: 5%;
+      text-align: center;
     }
+
+    .rowGrey {
+      background-color: $colorGris;
+    }
+
+    .rowOrange {
+      background-color: $colorRojo;
+      color: $colorBlanco;
+    }
+  }
 }
 
 /*******************************************
@@ -433,19 +408,18 @@ h2{
 * COMIENZA ESTILOS DE PATRONES:
 *******************************************/
 
-.contenedorPatrones{
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.contenedorPatrones {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 
-    h2{
-        @include encabezadoSecciones;        
-    }
+  h2 {
+    @include encabezadoSecciones;
+  }
 
-
-.hijoContenedorPatrones{
-    background-color:  $colorRojo;
+  .hijoContenedorPatrones {
+    background-color: $colorRojo;
     padding: 1% 0% 1% 0%;
     margin-bottom: 2%;
     border-radius: 1rem;
@@ -453,78 +427,86 @@ h2{
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    -webkit-box-shadow: 10px 10px 28px -13px rgba(0,0,0,0.9);
-    -moz-box-shadow: 10px 10px 28px -13px rgba(0,0,0,0.9);
-    box-shadow: 10px 10px 28px -13px rgba(0,0,0,0.9);
+    -webkit-box-shadow: 10px 10px 28px -13px rgba(0, 0, 0, 0.9);
+    -moz-box-shadow: 10px 10px 28px -13px rgba(0, 0, 0, 0.9);
+    box-shadow: 10px 10px 28px -13px rgba(0, 0, 0, 0.9);
 
-    img{
-        width: 90%;
-        border:solid 5px $colorBlanco;
-        border-radius: 50%;
+    img {
+      width: 90%;
+      border: solid 5px $colorBlanco;
+      border-radius: 50%;
     }
 
-    h3{
-        margin-top: 3%;
-        padding: 2%;
-        text-align: center;
-        font-size: 1.2rem;
-        font-family: $robotoS;
-        color: $colorRojo;
-        background-color: $colorBlanco;
-        border-radius: 5rem;
-        -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-        box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-       
+    h3 {
+      margin-top: 3%;
+      padding: 2%;
+      text-align: center;
+      font-size: 1.2rem;
+      font-family: $robotoS;
+      color: $colorRojo;
+      background-color: $colorBlanco;
+      border-radius: 5rem;
+      -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
     }
 
-    p{
-        font-size: 1.3rem;
+    p {
+      font-size: 1.3rem;
+      color: $colorBlanco;
+      font-weight: 400;
+      font-style: italic;
+      padding: 1% 0% 2% 0%;
+    }
+
+    .precioPatrones {
+      display: flex;
+      width: 30%;
+      flex-direction: column;
+      text-align: center;
+      padding: 1%;
+      border-top: solid 2px $colorBlanco;
+      border-bottom: solid 2px $colorBlanco;
+
+      span {
+        font-weight: 900;
         color: $colorBlanco;
-        font-weight:400;
-        font-style: italic;
-        padding: 1% 0% 2% 0%;
-    }
-
-    .precioPatrones{
-        display: flex;
-        width:30%;
-        flex-direction: column;
-        text-align: center;
         padding: 1%;
-        border-top: solid 2px $colorBlanco;
-        border-bottom: solid 2px $colorBlanco;
-
-        span{
-
-            font-weight: 900;
-            color: $colorBlanco;
-            padding: 1%;
-        }
+      }
     }
 
-    button{
-        margin-top: 5%;
-        padding: 2%;
-        @include Botones;
-    
+    button {
+      margin-top: 5%;
+      padding: 2%;
+      @include Botones;
     }
 
-    button:hover{
-        cursor: pointer;
-        animation: forwards;
-        animation-name: botonAnimación;
-        animation-duration: 3s;
+    button:hover {
+      cursor: pointer;
+      animation: forwards;
+      animation-name: botonAnimación;
+      animation-duration: 3s;
     }
-    
-    @keyframes botonAnimación{
-        0%{ transform: rotate(0deg); width:40%;}
-        25%{ transform: rotate(8deg); width:45%}
-        75%{ transform: rotate(-8deg); width:45%;}
-        100%{ transform: rotate(0deg); width:40%;}
+
+    @keyframes botonAnimación {
+      0% {
+        transform: rotate(0deg);
+        width: 40%;
+      }
+      25% {
+        transform: rotate(8deg);
+        width: 45%;
+      }
+      75% {
+        transform: rotate(-8deg);
+        width: 45%;
+      }
+      100% {
+        transform: rotate(0deg);
+        width: 40%;
+      }
     }
-    
-}
+  }
 }
 
 /*******************************************
@@ -535,81 +517,76 @@ h2{
 * COMIENZA ESTILOS DEL CONTACTO:
 *******************************************/
 
-.contenedorFormulario{
-    margin: auto;
+.contenedorFormulario {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  h2 {
+    @include encabezadoSecciones;
+  }
+
+  form {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    padding: 1%;
+    margin: 4%;
+    background-color: $colorRojo;
+    position: relative;
+    font-weight: 700;
+    color: $colorBlanco;
+    border-radius: 1rem;
 
-    h2{
-        @include encabezadoSecciones;
-    }
+    div {
+      width: 70%;
 
-    form{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        width: 40%;
-        padding: 1%;
-        margin: 4%;
-        background-color: $colorRojo;
-        position: relative;
-        font-weight: 700;
+      label {
+        position: absolute;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      select {
+        width: 100%;
         color: $colorBlanco;
-        border-radius: 1rem;
+        font-size: 1.2rem;
+        border: none;
+        margin: 5% 0% 5% 0%;
+        border-bottom: solid 2px $colorBlanco;
+        background: transparent;
+      }
 
-        div{
-            width: 70%;
-
-            label{
-                position: absolute;
-            }
-    
-            input[type=text], input[type=email], select{
-                width: 100%;
-                color: $colorBlanco;
-                font-size: 1.2rem;
-                border: none;
-                margin: 5% 0% 5% 0%;
-                border-bottom: solid 2px $colorBlanco;
-                background: transparent;
-            }
-
-            select{
-                option{
-                    background-color: $colorRojo;
-                }
-            }
-
-            textarea{
-                width: 100%;
-                margin: 3% 0% 3% 0%;
-                font-size: 1rem;
-            }
-        
+      select {
+        option {
+          background-color: $colorRojo;
         }
+      }
 
-
-
-
-        .botonForm{
-            margin: 3% 0% 3% 0%;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-
-            input{
-                width: 40%;
-                padding: 1% 3% 1% 3%;
-               @include Botones;
-            }
-        }
+      textarea {
+        width: 100%;
+        margin: 3% 0% 3% 0%;
+        font-size: 1rem;
+      }
     }
 
+    .botonForm {
+      margin: 3% 0% 3% 0%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
 
-    
+      input {
+        width: 40%;
+        padding: 1% 3% 1% 3%;
+        @include Botones;
+      }
+    }
+  }
 }
 
 /*******************************************
@@ -620,28 +597,25 @@ h2{
 * COMIENZA ESTILOS DEL FOOTER:
 *******************************************/
 
-footer{
-    background-color: #d3d3d3;
-    padding: 1% 0% 0.5% 0%;
-    
-    .contenedorRedesFooter{
-        h3{
-            font-size: 1rem;
-        }
+footer {
+  background-color: #d3d3d3;
+  padding: 1% 0% 0.5% 0%;
 
-        img{
-            width: 10%;
-            @include estiloRedes;
-        }
+  .contenedorRedesFooter {
+    h3 {
+      font-size: 1rem;
     }
-    
-    .copyRight{
-        text-align: center;
-      
+
+    img {
+      width: 10%;
+      @include estiloRedes;
     }
+  }
+
+  .copyRight {
+    text-align: center;
+  }
 }
-
-
 
 /*******************************************
 * FIN ESTILOS DE FOOTER
@@ -651,530 +625,494 @@ footer{
 * COMIENZA RESPONSIVE A 580px:
 *******************************************/
 
+@media (max-width: 580px) {
+  header {
+    background-color: $colorGris;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 
-@media (max-width: 580px){
-
-    header{
-        background-color: $colorGris;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-
-        .logo{
-            display: none;
-        }
-
-        .logo-m{
-            display: block;
-            img{
-                width: 70%;
-
-            }
-            
-        }
-        
-        .active{
-            color: $colorRojo !important;
-            font-weight: 700;
-        }
-    
-        .menu{
-            ul{
-                li{
-                    a{
-                        text-align: center;
-                    }
-                }
-            }
-        } 
-    
-        .contenedorRedesHeader {
-            text-align: center;
-           
-            h3{
-                font-size: 1.5rem;
-                margin-top: 8%;
-            }
-            img{
-                margin: 0% 3% 0% 3%;
-                @include estiloRedes;
-            }
-        }
+    .logo {
+      display: none;
     }
-    
-/*******************************************
+
+    .logo-m {
+      display: block;
+      img {
+        width: 70%;
+      }
+    }
+
+    .active {
+      color: $colorRojo !important;
+      font-weight: 700;
+    }
+
+    .menu {
+      padding: 0;
+      ul {
+        li {
+          a {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .contenedorRedesHeader {
+      text-align: center;
+
+      h3 {
+        font-size: 1.5rem;
+        margin-top: 8%;
+      }
+      img {
+        width: 10%;
+        margin: 0% 3% 0% 3%;
+        @include estiloRedes;
+      }
+    }
+  }
+
+  /*******************************************
 * COMIENZA ESTILOS DEL INDEX.
 *******************************************/
 
-
-.fondoSection{
+  .fondoSection {
     background-size: 194vh;
     height: 100vh;
     background-color: $colorRojo;
     background-position-x: 19%;
 
-    h1{
-        text-align: center;
-        transform: translateY(10rem);
-        animation:forwards;
-        animation-name: entraTexto;
-        animation-duration: 4s;
-        animation-timing-function: ease-in-out;
+    h1 {
+      text-align: center;
+      transform: translateY(10rem);
+      animation: forwards;
+      animation-name: entraTexto;
+      animation-duration: 4s;
+      animation-timing-function: ease-in-out;
     }
-    
-    
+
     @keyframes entraTexto {
-        0% {transform: translateY(-15rem);}
-        100% {transform: translateY(8rem); color:$colorBlanco;}
+      0% {
+        transform: translateY(-15rem);
       }
-    
-
-}
-
-.contenedorDestacado {
-
-    .contenedorImgDestacado {
-        position: relative;
-        width: 100%;
-        margin: 0 auto;
-        padding: 0;
-    
-        img{
-            display: block;
-            width: 100%;
-            border-radius: 50%;
-            height: auto;
-            
-        }
-    
-
-        div{
-            width: 100%;
-            height: 100%;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            position: absolute;
-            opacity: 1;
-            transition: .5s ease;
-            background-color: rgba(255, 255, 255,0.3);
-            border-radius: 50%;
-            cursor: pointer;
-
-            p{            
-                color: $colorRojo;
-                font-size: 20px;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                -webkit-transform: translate(-50%, -50%);
-                -ms-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-                font-weight: 700;
-                font-size: 1.5rem;
-                text-align: center;
-               
-            }
-        }
-    
-
-        
+      100% {
+        transform: translateY(8rem);
+        color: $colorBlanco;
+      }
     }
+  }
 
-}
+  .contenedorDestacado {
+    .contenedorImgDestacado {
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
 
+      img {
+        display: block;
+        width: 100%;
+        border-radius: 50%;
+        height: auto;
+      }
 
+      div {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        opacity: 1;
+        transition: 0.5s ease;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        cursor: pointer;
 
-/*******************************************
+        p {
+          color: $colorRojo;
+          font-size: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          font-weight: 700;
+          font-size: 1.5rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  /*******************************************
 * FIN ESTILOS DEL INDEX.
 *******************************************/
 
-/*******************************************
+  /*******************************************
 * COMIENZA ESTILOS DE SOBRE MI:
 *******************************************/
-.padreContenedorSobreMi{
+  .padreContenedorSobreMi {
+    .contenedorSobreMi {
+      img {
+        width: 100%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
 
-    
-    .contenedorSobreMi{
+      div {
+        width: 100%;
+        padding: 5%;
+      }
 
-    
-        img{
-            width: 100%;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-        }
-    
-        div{
-            width: 100%;
-            padding: 5%;
-        }
-    
-        h3{
-            font-size: 2rem;
-        }
-    
-        p{
-            font-size: 1.2rem;
-        }
+      h3 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
     }
-    
-    }
-    
-    /*******************************************
+  }
+
+  /*******************************************
     * FIN ESTILOS DE SOBRE MI.
     *******************************************/
-    
 
-/*******************************************
+  /*******************************************
 * COMIENZA ESTILOS DEL PEDIDOS:
 *******************************************/
 
-.contenedorPedidos {
+  .contenedorPedidos {
+    form {
+      width: 100%;
+      margin: 3% auto;
+      padding: 1%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      border: dotted 3px $colorRojo;
+      border-radius: 1rem;
 
-    form{
-        width: 100%;
-        margin: 3% auto;
-        padding: 1%;
-        display:flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        border: dotted 3px $colorRojo;
+      .contenedorInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        label {
+          font-weight: 700;
+        }
+
+        input {
+          padding: 1% 5% 1% 5%;
+        }
+      }
+
+      .contenedorCalendario {
+        width: 90%;
+        height: 100%;
+        padding: 6% 2% 11% 2%;
+        display: grid;
+        text-align: center;
         border-radius: 1rem;
 
-        .contenedorInfo{ 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            label{ 
-                font-weight: 700;
-                
-            }
-
-            input{ 
-                
-                padding: 1% 5% 1% 5%;
-            }
-            
+        h3 {
+          width: 100%;
         }
 
-        .contenedoBoton{
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
-        
-            input{
-                margin-top: 5%;
-                padding: 0.5% 2% 0.5% 2%;
-                background-color: $colorRojo !important;
-                color: $colorBlanco !important;
-                @include Botones;
-            }
+        h4 {
+          display: none;
         }
-    
-    }
 
-    h2{
-       @include encabezadoSecciones;
-    }
+        h5 {
+          display: inline;
+          padding: 0;
+          margin: 0;
+          align-self: center;
+          color: $colorBlanco;
+        }
 
-    p{
+        span {
+          width: 100%;
+          height: 3rem;
+          background-color: $colorBlancoHumo;
+          border-radius: 0.5rem;
+          cursor: pointer;
+        }
+      }
+
+      .contenedoBoton {
         width: 100%;
-        text-align: center;
-        font-size: 1.2rem;
+        display: flex;
+        justify-content: flex-end;
+
+        input {
+          margin-top: 5%;
+          padding: 0.5% 2% 0.5% 2%;
+          background-color: $colorRojo !important;
+          color: $colorBlanco !important;
+          @include Botones;
+        }
+      }
     }
 
-}
-
-
-#fechaGrid{
-    width: 90%;
-    height: 100%;
-    padding: 6% 2% 11% 2%;
-    display: grid;
-    text-align: center;
-    border-radius: 1rem;
-
-    h3{
-        width: 100%;
+    h2 {
+      @include encabezadoSecciones;
     }
 
-    h4{
-        display: none;
-     }
-
-    h5{
-    display: inline;
-    padding: 0;
-    margin:0;
-    align-self: center;
-    color: $colorBlanco;
+    p {
+      width: 100%;
+      text-align: center;
+      font-size: 1.2rem;
     }
+  }
 
-     span{
-        width:100%;
-        height: 3rem;
-        background-color: $colorBlancoHumo;
-        border-radius: 0.5rem;
-        cursor: pointer;
-    }
-
-    
-}
-
-
-.contenedorPrecios{
+  .contenedorPrecios {
     width: 100%;
     margin: 2% auto;
     display: grid;
     justify-content: center;
     align-items: stretch;
-    grid-template-columns: 1fr ;
-    grid-template-rows: auto ;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
     row-gap: 1%;
     column-gap: 0.5%;
     padding: 0%;
 
-    h3{
-        
-        justify-self: center;
-        grid-column-start: 1;
-        grid-column-end: 5;
+    h3 {
+      justify-self: center;
+      grid-column-start: 1;
+      grid-column-end: 5;
     }
 
-    div{
-        
-        h4{
-            height: 3rem;
-            font-size: 0.9rem;
-            color: $colorBlanco;
-            background-color: $colorRojo;
-            align-self: stretch;
-            text-align: center;
-            padding: 1%;
-        }
+    div {
+      h4 {
+        height: 3rem;
+        font-size: 0.9rem;
+        color: $colorBlanco;
+        background-color: $colorRojo;
+        align-self: stretch;
+        text-align: center;
+        padding: 1%;
+      }
 
-        span{
-            height: 4rem;
-            font-size: 0.9rem;
-            font-weight: 700;
-            padding: 0% 0% 0% 0%;
-            margin-top: 0.3em;
-            text-align: center;
-        }
+      span {
+        height: 4rem;
+        font-size: 0.9rem;
+        font-weight: 700;
+        padding: 0% 0% 0% 0%;
+        margin-top: 0.3em;
+        text-align: center;
+      }
 
-        .rowGrey{
-            background-color: $colorGris;
-        }
-        
-        .rowOrange{
-            background-color: $colorRojo;
-            color: $colorBlanco;
-        }
-        
-        
+      .rowGrey {
+        background-color: $colorGris;
+      }
+
+      .rowOrange {
+        background-color: $colorRojo;
+        color: $colorBlanco;
+      }
     }
-}
+  }
 
-/*******************************************
+  /*******************************************
 * FIN ESTILOS DEL PEDIDOS.
 *******************************************/
 
-/*******************************************
+  /*******************************************
 * COMIENZA ESTILOS DE PATRONES:
 *******************************************/
 
-.contenedorPatrones{
-
-    h2{
-        @include encabezadoSecciones;        
+  .contenedorPatrones {
+    h2 {
+      @include encabezadoSecciones;
     }
 
-
-
-    p{
-        width: 90%;
-        text-align: center;
+    p {
+      width: 90%;
+      text-align: center;
     }
-    
 
+    .hijoContenedorPatrones {
+      width: 90%;
+      margin: 2% 0% 8% 0%;
 
-.hijoContenedorPatrones{
-    width: 90%;
-    margin: 2% 0% 8% 0%;
-
-    h3{
+      h3 {
         font-size: 1.5rem;
         padding: 1.5%;
-       
-    }
+      }
 
-    p{
+      p {
         font-size: 1.3rem;
         color: $colorBlanco;
-        font-weight:400;
+        font-weight: 400;
         font-style: italic;
         padding: 1% 0% 2% 0%;
-    }
+      }
 
-    .precioPatrones{
+      .precioPatrones {
         display: flex;
-        width:30%;
+        width: 30%;
         flex-direction: column;
         text-align: center;
         padding: 1%;
         border-top: solid 2px $colorBlanco;
         border-bottom: solid 2px $colorBlanco;
 
-        span{
-
-            font-weight: 900;
-            color: $colorBlanco;
-            padding: 1%;
+        span {
+          font-weight: 900;
+          color: $colorBlanco;
+          padding: 1%;
         }
-    }
+      }
 
-    button{
+      button {
         margin-top: 5%;
         padding: 2%;
         @include Botones;
-    
-    }
+      }
 
-    button:hover{
+      button:hover {
         cursor: pointer;
         animation: forwards;
         animation-name: botonAnimación;
         animation-duration: 3s;
-    }
-    
-    @keyframes botonAnimación{
-        0%{ transform: rotate(0deg); width:30%;}
-        25%{ transform: rotate(8deg); width:35%}
-        75%{ transform: rotate(-8deg); width:35%;}
-        100%{ transform: rotate(0deg); width:30%;}
-    }
-    
-}
-}
+      }
 
-/*******************************************
+      @keyframes botonAnimación {
+        0% {
+          transform: rotate(0deg);
+          width: 30%;
+        }
+        25% {
+          transform: rotate(8deg);
+          width: 35%;
+        }
+        75% {
+          transform: rotate(-8deg);
+          width: 35%;
+        }
+        100% {
+          transform: rotate(0deg);
+          width: 30%;
+        }
+      }
+    }
+  }
+
+  /*******************************************
 * FIN ESTILOS DE PATRONES:
 *******************************************/
 
-/*******************************************
+  /*******************************************
 * COMIENZA ESTILOS DEL CONTACTO:
 *******************************************/
 
-.contenedorFormulario{
+  .contenedorFormulario {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
-    h2{
-        @include encabezadoSecciones;
+    h2 {
+      @include encabezadoSecciones;
     }
 
-    form{
+    form {
+      width: 90%;
+      padding: 2%;
+
+      div {
         width: 90%;
-        padding: 2%;
 
-        div{
-            width: 90%;
-
-
-            input[type=text], input[type=email], select{
-                width: 100%;
-                color: $colorBlanco;
-                font-size: 1.2rem;
-                border: none;
-                margin: 5% 0% 5% 0%;
-                border-bottom: solid 2px $colorBlanco;
-                background: transparent;
-            }
-
-            select{
-                option{
-                    background-color: $colorRojo;
-                }
-            }
-
-            textarea{
-                width: 100%;
-                margin: 3% 0% 3% 0%;
-                font-size: 1rem;
-            }
-        
+        input[type="text"],
+        input[type="email"],
+        select {
+          width: 100%;
+          color: $colorBlanco;
+          font-size: 1.2rem;
+          border: none;
+          margin: 5% 0% 5% 0%;
+          border-bottom: solid 2px $colorBlanco;
+          background: transparent;
         }
 
-
-
-
-        .botonForm{
-            margin: 3% 0% 3% 0%;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            text-align: center;
-
-            input{
-                width: 45%;
-                padding: 1% 5% 1% 5%;
-               @include Botones;
-            }
+        select {
+          option {
+            background-color: $colorRojo;
+          }
         }
+
+        textarea {
+          width: 100%;
+          margin: 3% 0% 3% 0%;
+          font-size: 1rem;
+        }
+      }
+
+      .botonForm {
+        margin: 3% 0% 3% 0%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+
+        input {
+          width: 45%;
+          padding: 1% 5% 1% 5%;
+          @include Botones;
+        }
+      }
     }
+  }
 
-
-    
-}
-
-/*******************************************
+  /*******************************************
 * FIN ESTILOS DEL CONTACTO.
 *******************************************/
 
-
-/*******************************************
+  /*******************************************
 * COMIENZA ESTILOS DEL FOOTER:
 *******************************************/
 
-footer{
+  footer {
     text-align: center;
 
-    address{
-        font-size: 1.2rem;
+    address {
+      font-size: 1.2rem;
     }
-    
-    .contenedorRedesFooter{
 
-        h3{
-            font-size: 1.5rem;
-        }
-
-        img{
-            display: block;
-            width: 15%;
-            margin: auto;
-            @include estiloRedes;
-            padding-bottom: 2%;
-        }
-    }
-    
-    .copyRight{
+    .contenedorRedesFooter {
+      h3 {
         font-size: 1.5rem;
-        font-style: italic;
-        margin: 1% 0% 8% 0%;
-    }
-}
+      }
 
-/*******************************************
+      img {
+        display: block;
+        width: 15%;
+        margin: auto;
+        @include estiloRedes;
+        padding-bottom: 2%;
+      }
+    }
+
+    .copyRight {
+      font-size: 1.5rem;
+      font-style: italic;
+      margin: 1% 0% 8% 0%;
+    }
+  }
+
+  /*******************************************
 * FIN ESTILOS DE FOOTER
 *******************************************/
-
 }
 
 /*******************************************
