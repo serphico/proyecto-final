@@ -67,16 +67,11 @@ header .contenedorRedesHeader img {
 .fondoSection {
   background-image: url("../img/index/fondo.png");
   background-repeat: no-repeat;
+  background-size: contain;
   height: 50vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  align-items: center;
+  justify-content: flex-end;
   overflow: hidden;
 }
 
@@ -84,46 +79,22 @@ header .contenedorRedesHeader img {
   font-family: "Roboto Slab", serif;
   font-size: 3rem;
   color: transparent;
-  -webkit-transform: translateX(28rem);
-          transform: translateX(28rem);
-  -webkit-animation: forwards;
-          animation: forwards;
-  -webkit-animation-name: entraTexto;
-          animation-name: entraTexto;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-}
-
-@-webkit-keyframes entraTexto {
-  0% {
-    -webkit-transform: translateX(28rem);
-            transform: translateX(28rem);
-  }
-  50% {
-    -webkit-transform: translateX(-5rem);
-            transform: translateX(-5rem);
-  }
-  100% {
-    -webkit-transform: translateX(0rem);
-            transform: translateX(0rem);
-    color: firebrick;
-  }
+  transform: translateX(28rem);
+  animation: forwards;
+  animation-name: entraTexto;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes entraTexto {
   0% {
-    -webkit-transform: translateX(28rem);
-            transform: translateX(28rem);
+    transform: translateX(28rem);
   }
   50% {
-    -webkit-transform: translateX(-5rem);
-            transform: translateX(-5rem);
+    transform: translateX(-5rem);
   }
   100% {
-    -webkit-transform: translateX(0rem);
-            transform: translateX(0rem);
+    transform: translateX(0rem);
     color: firebrick;
   }
 }
@@ -141,21 +112,27 @@ header .contenedorRedesHeader img {
   color: firebrick;
 }
 
-.contenedorDestacado .contenedorImgDestacado {
+.contenedorDestacado .contenedorImgDestacado1,
+.contenedorDestacado .contenedorImgDestacado2,
+.contenedorDestacado .contenedorImgDestacado3 {
   position: relative;
   width: 50%;
   margin: 0 auto;
   padding: 0;
 }
 
-.contenedorDestacado .contenedorImgDestacado img {
+.contenedorDestacado .contenedorImgDestacado1 img,
+.contenedorDestacado .contenedorImgDestacado2 img,
+.contenedorDestacado .contenedorImgDestacado3 img {
   display: block;
   width: 90%;
   border-radius: 50%;
   height: auto;
 }
 
-.contenedorDestacado .contenedorImgDestacado div {
+.contenedorDestacado .contenedorImgDestacado1 div,
+.contenedorDestacado .contenedorImgDestacado2 div,
+.contenedorDestacado .contenedorImgDestacado3 div {
   width: 90%;
   height: 100%;
   top: 0;
@@ -164,20 +141,20 @@ header .contenedorRedesHeader img {
   right: 0;
   position: absolute;
   opacity: 0;
-  -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   background-color: rgba(178, 34, 34, 0.5);
   border-radius: 50%;
   cursor: pointer;
 }
 
-.contenedorDestacado .contenedorImgDestacado div p {
+.contenedorDestacado .contenedorImgDestacado1 div p,
+.contenedorDestacado .contenedorImgDestacado2 div p,
+.contenedorDestacado .contenedorImgDestacado3 div p {
   color: white;
   font-size: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-weight: 700;
   font-size: 1.5rem;
@@ -185,12 +162,68 @@ header .contenedorRedesHeader img {
 }
 
 .contenedorDestacado .contenedorImgDestacado:hover img {
-  -webkit-filter: blur(5px);
-          filter: blur(5px);
+  filter: blur(5px);
 }
 
 .contenedorDestacado .contenedorImgDestacado:hover div {
   opacity: 1;
+}
+
+.contenedorDestacado .contenedorModal2 {
+  width: 100%;
+  padding: 5%;
+  margin: 0 auto;
+  left: 0;
+  height: max-content;
+  position: absolute;
+  background-color: rgba(178, 34, 34, 0.9);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 1rem;
+  z-index: 100;
+}
+
+.contenedorDestacado .contenedorModal2 .botonCerrar {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.contenedorDestacado .contenedorModal2 .botonCerrar input {
+  width: 10%;
+  border: none;
+  border-radius: 50%;
+  font-weight: 900;
+}
+
+.contenedorDestacado .contenedorModal2 img {
+  width: 100%;
+  left: -10rem;
+  transform: rotateY(0deg);
+  animation: 1s shake infinite linear;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.contenedorDestacado .contenedorModal2 div {
+  width: 100%;
+  color: white;
 }
 
 /*******************************************
@@ -212,36 +245,32 @@ header .contenedorRedesHeader img {
   width: 90%;
   margin: 3% auto;
   padding: 2%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
   background-color: firebrick;
   border-radius: 1rem;
 }
 
 .padreContenedorSobreMi .contenedorSobreMi img {
-  width: 50%;
+  width: 40%;
 }
 
 .padreContenedorSobreMi .contenedorSobreMi div {
-  width: 50%;
+  width: 60%;
   padding: 5%;
 }
 
 .padreContenedorSobreMi .contenedorSobreMi h3 {
+  font-size: 1rem;
   color: white;
   text-align: center;
   font-weight: 900;
 }
 
 .padreContenedorSobreMi .contenedorSobreMi p {
+  font-size: 0.8rem;
   color: white;
   text-align: justify;
 }
@@ -256,32 +285,18 @@ header .contenedorRedesHeader img {
   width: 80%;
   margin: 3% auto;
   padding: 1%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
   border: dotted 3px firebrick;
   border-radius: 1rem;
 }
 
 .contenedorPedidos form .contenedorInfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .contenedorPedidos form .contenedorInfo label {
@@ -294,12 +309,8 @@ header .contenedorRedesHeader img {
 
 .contenedorPedidos form .contenedoBoton {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .contenedorPedidos form .contenedoBoton input {
@@ -313,7 +324,6 @@ header .contenedorRedesHeader img {
   border-radius: 5rem;
   font-size: 1.2rem;
   font-weight: 900;
-  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
   cursor: pointer;
 }
@@ -322,16 +332,11 @@ header .contenedorRedesHeader img {
   text-align: center;
   background-color: firebrick;
   border-radius: 1rem;
-  display: -ms-grid;
   display: grid;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  -webkit-column-gap: 1%;
-          column-gap: 1%;
+  align-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 1%;
   row-gap: 1%;
   padding: 4% 1% 4% 1%;
 }
@@ -340,18 +345,13 @@ header .contenedorRedesHeader img {
   font-size: 2rem;
   font-weight: 900;
   color: white;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column: 1;
-      grid-column-start: 1;
+  align-self: center;
+  grid-column-start: 1;
   grid-column-end: 8;
 }
 
 .contenedorPedidos form .contenedorCalendario h4 {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   color: white;
 }
 
@@ -360,15 +360,9 @@ header .contenedorRedesHeader img {
 }
 
 .contenedorPedidos form .contenedorCalendario span {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   height: 4rem;
   background-color: whitesmoke;
   border-radius: 0.5rem;
@@ -397,44 +391,30 @@ header .contenedorRedesHeader img {
 .contenedorPrecios {
   width: 60%;
   margin: 2% auto;
-  display: -ms-grid;
   display: grid;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
+  align-items: start;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   row-gap: 2%;
   padding: 1%;
 }
 
 .contenedorPrecios h3 {
-  -ms-grid-column-align: center;
-      justify-self: center;
-  -ms-grid-column: 1;
-      grid-column-start: 1;
+  justify-self: center;
+  grid-column-start: 1;
   grid-column-end: 5;
 }
 
 .contenedorPrecios div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .contenedorPrecios div h4 {
   font-size: 1rem;
   color: white;
   background-color: firebrick;
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
+  align-self: stretch;
   text-align: center;
   padding: 1%;
 }
@@ -464,13 +444,9 @@ header .contenedorRedesHeader img {
 *******************************************/
 .contenedorPatrones {
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .contenedorPatrones h2 {
@@ -482,24 +458,20 @@ header .contenedorRedesHeader img {
   color: firebrick;
 }
 
+.contenedorPatrones p {
+  text-align: center;
+}
+
 .contenedorPatrones .hijoContenedorPatrones {
   background-color: firebrick;
   padding: 1% 0% 1% 0%;
+  margin-top: 2%;
   margin-bottom: 2%;
   border-radius: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-shadow: 10px 10px 28px -13px rgba(0, 0, 0, 0.9);
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
   box-shadow: 10px 10px 28px -13px rgba(0, 0, 0, 0.9);
 }
 
@@ -518,7 +490,6 @@ header .contenedorRedesHeader img {
   color: firebrick;
   background-color: white;
   border-radius: 5rem;
-  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
@@ -531,14 +502,9 @@ header .contenedorRedesHeader img {
 }
 
 .contenedorPatrones .hijoContenedorPatrones .precioPatrones {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 30%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   text-align: center;
   padding: 1%;
   border-top: solid 2px white;
@@ -560,63 +526,32 @@ header .contenedorRedesHeader img {
   border-radius: 5rem;
   font-size: 1.2rem;
   font-weight: 900;
-  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
   cursor: pointer;
 }
 
 .contenedorPatrones .hijoContenedorPatrones button:hover {
   cursor: pointer;
-  -webkit-animation: forwards;
-          animation: forwards;
-  -webkit-animation-name: botonAnimación;
-          animation-name: botonAnimación;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-}
-
-@-webkit-keyframes botonAnimación {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    width: 40%;
-  }
-  25% {
-    -webkit-transform: rotate(8deg);
-            transform: rotate(8deg);
-    width: 45%;
-  }
-  75% {
-    -webkit-transform: rotate(-8deg);
-            transform: rotate(-8deg);
-    width: 45%;
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    width: 40%;
-  }
+  animation: forwards;
+  animation-name: botonAnimación;
+  animation-duration: 3s;
 }
 
 @keyframes botonAnimación {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
     width: 40%;
   }
   25% {
-    -webkit-transform: rotate(8deg);
-            transform: rotate(8deg);
+    transform: rotate(8deg);
     width: 45%;
   }
   75% {
-    -webkit-transform: rotate(-8deg);
-            transform: rotate(-8deg);
+    transform: rotate(-8deg);
     width: 45%;
   }
   100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
     width: 40%;
   }
 }
@@ -629,14 +564,9 @@ header .contenedorRedesHeader img {
 *******************************************/
 .contenedorFormulario {
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .contenedorFormulario h2 {
@@ -649,19 +579,10 @@ header .contenedorRedesHeader img {
 }
 
 .contenedorFormulario form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   width: 40%;
   padding: 1%;
   margin: 4%;
@@ -704,17 +625,10 @@ header .contenedorRedesHeader img {
 
 .contenedorFormulario form .botonForm {
   margin: 3% 0% 3% 0%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .contenedorFormulario form .botonForm input {
@@ -726,7 +640,6 @@ header .contenedorRedesHeader img {
   border-radius: 5rem;
   font-size: 1.2rem;
   font-weight: 900;
-  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
   cursor: pointer;
 }
@@ -765,16 +678,9 @@ footer .copyRight {
   header {
     background-color: #d3d3d3;
     padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
   }
   header .logo {
     display: none;
@@ -817,53 +723,48 @@ footer .copyRight {
     background-position-x: 19%;
   }
   .fondoSection h1 {
+    font-size: 2rem;
     text-align: center;
-    -webkit-transform: translateY(10rem);
-            transform: translateY(10rem);
-    -webkit-animation: forwards;
-            animation: forwards;
-    -webkit-animation-name: entraTexto;
-            animation-name: entraTexto;
-    -webkit-animation-duration: 4s;
-            animation-duration: 4s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-  }
-  @-webkit-keyframes entraTexto {
-    0% {
-      -webkit-transform: translateY(-15rem);
-              transform: translateY(-15rem);
-    }
-    100% {
-      -webkit-transform: translateY(8rem);
-              transform: translateY(8rem);
-      color: white;
-    }
+    transform: translateY(10rem);
+    animation: forwards;
+    animation-name: entraTexto;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
   }
   @keyframes entraTexto {
     0% {
-      -webkit-transform: translateY(-15rem);
-              transform: translateY(-15rem);
+      transform: translateY(-15rem);
     }
     100% {
-      -webkit-transform: translateY(8rem);
-              transform: translateY(8rem);
+      transform: translateY(8rem);
       color: white;
     }
   }
-  .contenedorDestacado .contenedorImgDestacado {
+  .contenedorDestacado {
+    margin: 0% 0% 0% 0%;
+  }
+  .contenedorDestacado h2 {
+    font-size: 1.8rem;
+  }
+  .contenedorDestacado .contenedorImgDestacado1,
+  .contenedorDestacado .contenedorImgDestacado2,
+  .contenedorDestacado .contenedorImgDestacado3 {
     position: relative;
     width: 100%;
     margin: 0 auto;
     padding: 0;
   }
-  .contenedorDestacado .contenedorImgDestacado img {
+  .contenedorDestacado .contenedorImgDestacado1 img,
+  .contenedorDestacado .contenedorImgDestacado2 img,
+  .contenedorDestacado .contenedorImgDestacado3 img {
     display: block;
     width: 100%;
     border-radius: 50%;
     height: auto;
   }
-  .contenedorDestacado .contenedorImgDestacado div {
+  .contenedorDestacado .contenedorImgDestacado1 div,
+  .contenedorDestacado .contenedorImgDestacado2 div,
+  .contenedorDestacado .contenedorImgDestacado3 div {
     width: 100%;
     height: 100%;
     top: 0;
@@ -872,23 +773,88 @@ footer .copyRight {
     right: 0;
     position: absolute;
     opacity: 1;
-    -webkit-transition: 0.5s ease;
     transition: 0.5s ease;
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     cursor: pointer;
   }
-  .contenedorDestacado .contenedorImgDestacado div p {
+  .contenedorDestacado .contenedorImgDestacado1 div p,
+  .contenedorDestacado .contenedorImgDestacado2 div p,
+  .contenedorDestacado .contenedorImgDestacado3 div p {
     color: firebrick;
     font-size: 20px;
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     font-weight: 700;
     font-size: 1.5rem;
     text-align: center;
+  }
+  .contenedorDestacado .contenedorModal1,
+  .contenedorDestacado .contenedorModal2,
+  .contenedorDestacado .contenedorModal3 {
+    width: 100%;
+    height: 100vh;
+    padding: 5%;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgba(178, 34, 34, 0.9);
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 1rem;
+    z-index: 100;
+  }
+  .contenedorDestacado .contenedorModal1 .botonCerrar,
+  .contenedorDestacado .contenedorModal2 .botonCerrar,
+  .contenedorDestacado .contenedorModal3 .botonCerrar {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .contenedorDestacado .contenedorModal1 .botonCerrar input,
+  .contenedorDestacado .contenedorModal2 .botonCerrar input,
+  .contenedorDestacado .contenedorModal3 .botonCerrar input {
+    width: 15%;
+    border: none;
+    border-radius: 50%;
+    font-weight: 900;
+  }
+  .contenedorDestacado .contenedorModal1 img,
+  .contenedorDestacado .contenedorModal2 img,
+  .contenedorDestacado .contenedorModal3 img {
+    width: 100%;
+    left: -10rem;
+    transform: rotateY(0deg);
+    animation: 1s shake infinite linear;
+  }
+  @keyframes shake {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(5deg);
+    }
+    75% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  .contenedorDestacado .contenedorModal1 div,
+  .contenedorDestacado .contenedorModal2 div,
+  .contenedorDestacado .contenedorModal3 div {
+    width: 100%;
+    color: white;
+  }
+  .contenedorDestacado .activo {
+    display: flex;
   }
   /*******************************************
 * FIN ESTILOS DEL INDEX.
@@ -906,10 +872,10 @@ footer .copyRight {
     padding: 5%;
   }
   .padreContenedorSobreMi .contenedorSobreMi h3 {
-    font-size: 2rem;
+    font-size: 1rem;
   }
   .padreContenedorSobreMi .contenedorSobreMi p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   /*******************************************
     * FIN ESTILOS DE SOBRE MI.
@@ -921,31 +887,17 @@ footer .copyRight {
     width: 100%;
     margin: 3% auto;
     padding: 1%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     border: dotted 3px firebrick;
     border-radius: 1rem;
   }
   .contenedorPedidos form .contenedorInfo {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    justify-content: center;
   }
   .contenedorPedidos form .contenedorInfo label {
     font-weight: 700;
@@ -957,7 +909,6 @@ footer .copyRight {
     width: 90%;
     height: 100%;
     padding: 6% 2% 11% 2%;
-    display: -ms-grid;
     display: grid;
     text-align: center;
     border-radius: 1rem;
@@ -972,9 +923,7 @@ footer .copyRight {
     display: inline;
     padding: 0;
     margin: 0;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    align-self: center;
     color: white;
   }
   .contenedorPedidos form .contenedorCalendario span {
@@ -986,12 +935,8 @@ footer .copyRight {
   }
   .contenedorPedidos form .contenedoBoton {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    justify-content: flex-end;
   }
   .contenedorPedidos form .contenedoBoton input {
     margin-top: 5%;
@@ -1004,7 +949,6 @@ footer .copyRight {
     border-radius: 5rem;
     font-size: 1.2rem;
     font-weight: 900;
-    -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
     cursor: pointer;
   }
@@ -1024,28 +968,18 @@ footer .copyRight {
   .contenedorPrecios {
     width: 100%;
     margin: 2% auto;
-    display: -ms-grid;
     display: grid;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
+    justify-content: center;
+    align-items: stretch;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
     row-gap: 1%;
-    -webkit-column-gap: 0.5%;
-            column-gap: 0.5%;
+    column-gap: 0.5%;
     padding: 0%;
   }
   .contenedorPrecios h3 {
-    -ms-grid-column-align: center;
-        justify-self: center;
-    -ms-grid-column: 1;
-        grid-column-start: 1;
+    justify-self: center;
+    grid-column-start: 1;
     grid-column-end: 5;
   }
   .contenedorPrecios div h4 {
@@ -1053,9 +987,7 @@ footer .copyRight {
     font-size: 0.9rem;
     color: white;
     background-color: firebrick;
-    -ms-flex-item-align: stretch;
-        -ms-grid-row-align: stretch;
-        align-self: stretch;
+    align-self: stretch;
     text-align: center;
     padding: 1%;
   }
@@ -1108,14 +1040,9 @@ footer .copyRight {
     padding: 1% 0% 2% 0%;
   }
   .contenedorPatrones .hijoContenedorPatrones .precioPatrones {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 30%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     text-align: center;
     padding: 1%;
     border-top: solid 2px white;
@@ -1135,60 +1062,30 @@ footer .copyRight {
     border-radius: 5rem;
     font-size: 1.2rem;
     font-weight: 900;
-    -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
     cursor: pointer;
   }
   .contenedorPatrones .hijoContenedorPatrones button:hover {
     cursor: pointer;
-    -webkit-animation: forwards;
-            animation: forwards;
-    -webkit-animation-name: botonAnimación;
-            animation-name: botonAnimación;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
-  }
-  @-webkit-keyframes botonAnimación {
-    0% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-      width: 30%;
-    }
-    25% {
-      -webkit-transform: rotate(8deg);
-              transform: rotate(8deg);
-      width: 35%;
-    }
-    75% {
-      -webkit-transform: rotate(-8deg);
-              transform: rotate(-8deg);
-      width: 35%;
-    }
-    100% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-      width: 30%;
-    }
+    animation: forwards;
+    animation-name: botonAnimación;
+    animation-duration: 3s;
   }
   @keyframes botonAnimación {
     0% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
+      transform: rotate(0deg);
       width: 30%;
     }
     25% {
-      -webkit-transform: rotate(8deg);
-              transform: rotate(8deg);
+      transform: rotate(8deg);
       width: 35%;
     }
     75% {
-      -webkit-transform: rotate(-8deg);
-              transform: rotate(-8deg);
+      transform: rotate(-8deg);
       width: 35%;
     }
     100% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
+      transform: rotate(0deg);
       width: 30%;
     }
   }
@@ -1200,14 +1097,9 @@ footer .copyRight {
 *******************************************/
   .contenedorFormulario {
     margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .contenedorFormulario h2 {
     width: 100%;
@@ -1245,17 +1137,10 @@ footer .copyRight {
   }
   .contenedorFormulario form .botonForm {
     margin: 3% 0% 3% 0%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     text-align: center;
   }
   .contenedorFormulario form .botonForm input {
@@ -1267,7 +1152,6 @@ footer .copyRight {
     border-radius: 5rem;
     font-size: 1.2rem;
     font-weight: 900;
-    -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
     cursor: pointer;
   }

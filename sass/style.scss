@@ -112,6 +112,7 @@ header {
 .fondoSection {
   background-image: url("../img/index/fondo.png");
   background-repeat: no-repeat;
+  background-size: contain;
   height: 50vh;
   display: flex;
   align-items: center;
@@ -150,7 +151,9 @@ header {
     @include encabezadoSecciones;
   }
 
-  .contenedorImgDestacado {
+  .contenedorImgDestacado1,
+  .contenedorImgDestacado2,
+  .contenedorImgDestacado3 {
     position: relative;
     width: 50%;
     margin: 0 auto;
@@ -200,6 +203,61 @@ header {
   .contenedorImgDestacado:hover div {
     opacity: 1;
   }
+
+  .contenedorModal2 {
+    width: 100%;
+    padding: 5%;
+    margin: 0 auto;
+    left: 0;
+    height: max-content;
+    position: absolute;
+    background-color: rgba(178, 34, 34, 0.9);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 1rem;
+    z-index: 100;
+    .botonCerrar {
+      width: 100vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+
+      input {
+        width: 10%;
+        border: none;
+        border-radius: 50%;
+        font-weight: 900;
+      }
+    }
+
+    img {
+      width: 100%;
+      left: -10rem;
+      transform: rotateY(0deg);
+      animation: 1s shake infinite linear;
+
+      @keyframes shake {
+        0% {
+          transform: rotate(0deg);
+        }
+        25% {
+          transform: rotate(5deg);
+        }
+        75% {
+          transform: rotate(-5deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+    }
+    div {
+      width: 100%;
+      color: white;
+    }
+  }
 }
 
 /*******************************************
@@ -226,21 +284,23 @@ header {
     border-radius: 1rem;
 
     img {
-      width: 50%;
+      width: 40%;
     }
 
     div {
-      width: 50%;
+      width: 60%;
       padding: 5%;
     }
 
     h3 {
+      font-size: 1rem;
       color: $colorBlanco;
       text-align: center;
       font-weight: 900;
     }
 
     p {
+      font-size: 0.8rem;
       color: $colorBlanco;
       text-align: justify;
     }
@@ -418,9 +478,14 @@ header {
     @include encabezadoSecciones;
   }
 
+  p {
+    text-align: center;
+  }
+
   .hijoContenedorPatrones {
     background-color: $colorRojo;
     padding: 1% 0% 1% 0%;
+    margin-top: 2%;
     margin-bottom: 2%;
     border-radius: 1rem;
     display: flex;
@@ -686,6 +751,7 @@ footer {
     background-position-x: 19%;
 
     h1 {
+      font-size: 2rem;
       text-align: center;
       transform: translateY(10rem);
       animation: forwards;
@@ -706,7 +772,13 @@ footer {
   }
 
   .contenedorDestacado {
-    .contenedorImgDestacado {
+    margin: 0% 0% 0% 0%;
+    h2 {
+      font-size: 1.8rem;
+    }
+    .contenedorImgDestacado1,
+    .contenedorImgDestacado2,
+    .contenedorImgDestacado3 {
       position: relative;
       width: 100%;
       margin: 0 auto;
@@ -748,6 +820,68 @@ footer {
         }
       }
     }
+
+    .contenedorModal1,
+    .contenedorModal2,
+    .contenedorModal3 {
+      width: 100%;
+      height: 100vh;
+      padding: 5%;
+      margin: 0 auto;
+      top: 0;
+      left: 0;
+      position: fixed;
+      background-color: rgba(178, 34, 34, 0.9);
+      display: none;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      border-radius: 1rem;
+      z-index: 100;
+      .botonCerrar {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        input {
+          width: 15%;
+          border: none;
+          border-radius: 50%;
+          font-weight: 900;
+        }
+      }
+
+      img {
+        width: 100%;
+        left: -10rem;
+        transform: rotateY(0deg);
+        animation: 1s shake infinite linear;
+
+        @keyframes shake {
+          0% {
+            transform: rotate(0deg);
+          }
+          25% {
+            transform: rotate(5deg);
+          }
+          75% {
+            transform: rotate(-5deg);
+          }
+          100% {
+            transform: rotate(0deg);
+          }
+        }
+      }
+      div {
+        width: 100%;
+        color: white;
+      }
+    }
+
+    .activo {
+      display: flex;
+    }
   }
 
   /*******************************************
@@ -771,11 +905,11 @@ footer {
       }
 
       h3 {
-        font-size: 2rem;
+        font-size: 1rem;
       }
 
       p {
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
     }
   }
