@@ -7,11 +7,20 @@ $( document ).ready(function() {
     $('.cerrarModal'+i).click(cerrarModal);
 
     function modal(){
-        $('.contenedorModal'+i).addClass('activo');
+        var activoLength = $('.activo')
+        if(activoLength.length < 1){
+            $('.contenedorModal'+i).addClass('activo');
+       
+        }
+        
+   
+
+
     }
 
     function cerrarModal(){
         $('.contenedorModal'+i).removeClass('activo');
+
     }
 
 }

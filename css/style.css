@@ -169,15 +169,17 @@ header .contenedorRedesHeader img {
   opacity: 1;
 }
 
-.contenedorDestacado .contenedorModal2 {
-  width: 100%;
-  padding: 5%;
+.contenedorDestacado .contenedorModal1,
+.contenedorDestacado .contenedorModal2,
+.contenedorDestacado .contenedorModal3 {
+  width: 40%;
+  height: 60vh;
+  padding: 2%;
   margin: 0 auto;
-  left: 0;
-  height: max-content;
-  position: absolute;
-  background-color: rgba(178, 34, 34, 0.9);
-  display: flex;
+  top: 25%;
+  position: fixed;
+  background-color: firebrick;
+  display: none;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
@@ -185,23 +187,33 @@ header .contenedorRedesHeader img {
   z-index: 100;
 }
 
-.contenedorDestacado .contenedorModal2 .botonCerrar {
+.contenedorDestacado .contenedorModal1 .botonCerrar,
+.contenedorDestacado .contenedorModal2 .botonCerrar,
+.contenedorDestacado .contenedorModal3 .botonCerrar {
   width: 100vw;
+  height: fit-content;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
 
-.contenedorDestacado .contenedorModal2 .botonCerrar input {
-  width: 10%;
+.contenedorDestacado .contenedorModal1 .botonCerrar input,
+.contenedorDestacado .contenedorModal2 .botonCerrar input,
+.contenedorDestacado .contenedorModal3 .botonCerrar input {
+  width: 8%;
+  height: fit-content;
+  font-size: 2rem;
   border: none;
+  background-color: transparent;
+  color: white;
   border-radius: 50%;
   font-weight: 900;
 }
 
-.contenedorDestacado .contenedorModal2 img {
-  width: 100%;
-  left: -10rem;
+.contenedorDestacado .contenedorModal1 img,
+.contenedorDestacado .contenedorModal2 img,
+.contenedorDestacado .contenedorModal3 img {
+  width: 50%;
   transform: rotateY(0deg);
   animation: 1s shake infinite linear;
 }
@@ -221,9 +233,30 @@ header .contenedorRedesHeader img {
   }
 }
 
-.contenedorDestacado .contenedorModal2 div {
-  width: 100%;
-  color: white;
+.contenedorDestacado .contenedorModal1 .textoModal,
+.contenedorDestacado .contenedorModal2 .textoModal,
+.contenedorDestacado .contenedorModal3 .textoModal {
+  width: 50%;
+  padding-left: 2%;
+  color: firebrick;
+  border-radius: 1rem;
+  background-color: whitesmoke;
+}
+
+.contenedorDestacado .contenedorModal1 .textoModal h3,
+.contenedorDestacado .contenedorModal2 .textoModal h3,
+.contenedorDestacado .contenedorModal3 .textoModal h3 {
+  font-weight: 900;
+}
+
+.contenedorDestacado .contenedorModal1 .textoModal span,
+.contenedorDestacado .contenedorModal2 .textoModal span,
+.contenedorDestacado .contenedorModal3 .textoModal span {
+  font-weight: 900;
+}
+
+.contenedorDestacado .activo {
+  display: flex;
 }
 
 /*******************************************
@@ -723,7 +756,7 @@ footer .copyRight {
     background-position-x: 19%;
   }
   .fondoSection h1 {
-    font-size: 2rem;
+    font-size: 4.5rem;
     text-align: center;
     transform: translateY(10rem);
     animation: forwards;
@@ -744,7 +777,7 @@ footer .copyRight {
     margin: 0% 0% 0% 0%;
   }
   .contenedorDestacado h2 {
-    font-size: 1.8rem;
+    font-size: 3rem;
   }
   .contenedorDestacado .contenedorImgDestacado1,
   .contenedorDestacado .contenedorImgDestacado2,
@@ -774,22 +807,14 @@ footer .copyRight {
     position: absolute;
     opacity: 1;
     transition: 0.5s ease;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: transparent;
     border-radius: 50%;
     cursor: pointer;
   }
   .contenedorDestacado .contenedorImgDestacado1 div p,
   .contenedorDestacado .contenedorImgDestacado2 div p,
   .contenedorDestacado .contenedorImgDestacado3 div p {
-    color: firebrick;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: 700;
-    font-size: 1.5rem;
-    text-align: center;
+    display: none;
   }
   .contenedorDestacado .contenedorModal1,
   .contenedorDestacado .contenedorModal2,
@@ -801,7 +826,7 @@ footer .copyRight {
     top: 0;
     left: 0;
     position: fixed;
-    background-color: rgba(178, 34, 34, 0.9);
+    background-color: firebrick;
     display: none;
     flex-direction: row;
     flex-wrap: wrap;
@@ -821,7 +846,9 @@ footer .copyRight {
   .contenedorDestacado .contenedorModal2 .botonCerrar input,
   .contenedorDestacado .contenedorModal3 .botonCerrar input {
     width: 15%;
+    height: 6vh;
     border: none;
+    font-size: 2rem;
     border-radius: 50%;
     font-weight: 900;
   }
@@ -847,11 +874,32 @@ footer .copyRight {
       transform: rotate(0deg);
     }
   }
-  .contenedorDestacado .contenedorModal1 div,
-  .contenedorDestacado .contenedorModal2 div,
-  .contenedorDestacado .contenedorModal3 div {
+  .contenedorDestacado .contenedorModal1 .textoModal,
+  .contenedorDestacado .contenedorModal2 .textoModal,
+  .contenedorDestacado .contenedorModal3 .textoModal {
     width: 100%;
-    color: white;
+    padding-left: 2%;
+    color: firebrick;
+    border-radius: 1rem;
+    background-color: whitesmoke;
+  }
+  .contenedorDestacado .contenedorModal1 .textoModal h3,
+  .contenedorDestacado .contenedorModal2 .textoModal h3,
+  .contenedorDestacado .contenedorModal3 .textoModal h3 {
+    font-weight: 900;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .contenedorDestacado .contenedorModal1 .textoModal p,
+  .contenedorDestacado .contenedorModal2 .textoModal p,
+  .contenedorDestacado .contenedorModal3 .textoModal p {
+    font-size: 1.5rem;
+  }
+  .contenedorDestacado .contenedorModal1 .textoModal p span,
+  .contenedorDestacado .contenedorModal2 .textoModal p span,
+  .contenedorDestacado .contenedorModal3 .textoModal p span {
+    font-weight: 900;
+    font-size: 1.5rem;
   }
   .contenedorDestacado .activo {
     display: flex;

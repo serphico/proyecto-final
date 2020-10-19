@@ -204,15 +204,17 @@ header {
     opacity: 1;
   }
 
-  .contenedorModal2 {
-    width: 100%;
-    padding: 5%;
+  .contenedorModal1,
+  .contenedorModal2,
+  .contenedorModal3 {
+    width: 40%;
+    height: 60vh;
+    padding: 2%;
     margin: 0 auto;
-    left: 0;
-    height: max-content;
-    position: absolute;
-    background-color: rgba(178, 34, 34, 0.9);
-    display: flex;
+    top: 25%;
+    position: fixed;
+    background-color: $colorRojo;
+    display: none;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -220,21 +222,25 @@ header {
     z-index: 100;
     .botonCerrar {
       width: 100vw;
+      height: fit-content;
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
 
       input {
-        width: 10%;
+        width: 8%;
+        height: fit-content;
+        font-size: 2rem;
         border: none;
+        background-color: transparent;
+        color: $colorBlanco;
         border-radius: 50%;
         font-weight: 900;
       }
     }
 
     img {
-      width: 100%;
-      left: -10rem;
+      width: 50%;
       transform: rotateY(0deg);
       animation: 1s shake infinite linear;
 
@@ -253,10 +259,23 @@ header {
         }
       }
     }
-    div {
-      width: 100%;
-      color: white;
+    .textoModal {
+      width: 50%;
+      padding-left: 2%;
+      color: $colorRojo;
+      border-radius: 1rem;
+      background-color: $colorBlancoHumo;
+      h3 {
+        font-weight: 900;
+      }
+      span {
+        font-weight: 900;
+      }
     }
+  }
+
+  .activo {
+    display: flex;
   }
 }
 
@@ -751,7 +770,7 @@ footer {
     background-position-x: 19%;
 
     h1 {
-      font-size: 2rem;
+      font-size: 4.5rem;
       text-align: center;
       transform: translateY(10rem);
       animation: forwards;
@@ -774,7 +793,7 @@ footer {
   .contenedorDestacado {
     margin: 0% 0% 0% 0%;
     h2 {
-      font-size: 1.8rem;
+      font-size: 3rem;
     }
     .contenedorImgDestacado1,
     .contenedorImgDestacado2,
@@ -801,22 +820,12 @@ footer {
         position: absolute;
         opacity: 1;
         transition: 0.5s ease;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: transparent;
         border-radius: 50%;
         cursor: pointer;
 
         p {
-          color: $colorRojo;
-          font-size: 20px;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-          font-weight: 700;
-          font-size: 1.5rem;
-          text-align: center;
+          display: none;
         }
       }
     }
@@ -831,7 +840,7 @@ footer {
       top: 0;
       left: 0;
       position: fixed;
-      background-color: rgba(178, 34, 34, 0.9);
+      background-color: $colorRojo;
       display: none;
       flex-direction: row;
       flex-wrap: wrap;
@@ -846,7 +855,9 @@ footer {
 
         input {
           width: 15%;
+          height: 6vh;
           border: none;
+          font-size: 2rem;
           border-radius: 50%;
           font-weight: 900;
         }
@@ -873,9 +884,24 @@ footer {
           }
         }
       }
-      div {
+      .textoModal {
         width: 100%;
-        color: white;
+        padding-left: 2%;
+        color: $colorRojo;
+        border-radius: 1rem;
+        background-color: $colorBlancoHumo;
+        h3 {
+          font-weight: 900;
+          text-align: center;
+          font-size: 2.5rem;
+        }
+        p {
+          font-size: 1.5rem;
+          span {
+            font-weight: 900;
+            font-size: 1.5rem;
+          }
+        }
       }
     }
 
