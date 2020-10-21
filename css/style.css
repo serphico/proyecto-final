@@ -337,7 +337,12 @@ header .contenedorRedesHeader img {
 }
 
 .contenedorPedidos form .contenedorInfo input {
+  border-radius: 5rem;
   margin-bottom: 20%;
+}
+
+.contenedorPedidos form .contenedorInfo select {
+  border-radius: 5rem;
 }
 
 .contenedorPedidos form .contenedoBoton {
@@ -703,6 +708,277 @@ footer .copyRight {
 
 /*******************************************
 * FIN ESTILOS DE FOOTER
+*******************************************/
+/*******************************************
+* COMIENZA RESPONSIVE A 2560px:
+*******************************************/
+@media (min-width: 2500px) {
+  /*******************************************
+* COMIENZA ESTILOS DEL HEADER:
+*******************************************/
+  header .menu ul li a {
+    padding: 0% 5% 0% 5%;
+    font-size: 2.6rem;
+  }
+  header .menu ul li a:hover {
+    font-size: 2.6rem;
+  }
+  header .contenedorRedesHeader h3 {
+    font-size: 2rem;
+  }
+  header .contenedorRedesHeader img {
+    width: 20%;
+  }
+  /*******************************************
+* FIN ESTILOS DE HEADER
+*******************************************/
+  /*******************************************
+* COMIENZA ESTILOS DEL INDEX.
+*******************************************/
+  .fondoSection {
+    height: 38vh;
+  }
+  .fondoSection h1 {
+    font-size: 8rem;
+  }
+  .contenedorDestacado {
+    margin: 2% 0% 2% 0%;
+  }
+  .contenedorDestacado h2 {
+    font-size: 5rem !important;
+    margin-bottom: 5% !important;
+    width: 100%;
+    margin: 3% 0% 0% 0%;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Roboto Slab", serif;
+    color: firebrick;
+  }
+  .contenedorDestacado .contenedorImgDestacado1 div p,
+  .contenedorDestacado .contenedorImgDestacado2 div p,
+  .contenedorDestacado .contenedorImgDestacado3 div p {
+    font-size: 2.5rem;
+  }
+  .contenedorDestacado .contenedorModal1,
+  .contenedorDestacado .contenedorModal2,
+  .contenedorDestacado .contenedorModal3 {
+    width: 60%;
+  }
+  .contenedorDestacado .contenedorModal1 .botonCerrar input,
+  .contenedorDestacado .contenedorModal2 .botonCerrar input,
+  .contenedorDestacado .contenedorModal3 .botonCerrar input {
+    font-size: 5rem;
+  }
+  .contenedorDestacado .contenedorModal1 .textoModal,
+  .contenedorDestacado .contenedorModal2 .textoModal,
+  .contenedorDestacado .contenedorModal3 .textoModal {
+    width: 50%;
+    padding-left: 2%;
+    padding-right: 2%;
+    color: firebrick;
+    border-radius: 1rem;
+    background-color: whitesmoke;
+  }
+  .contenedorDestacado .contenedorModal1 .textoModal h3,
+  .contenedorDestacado .contenedorModal2 .textoModal h3,
+  .contenedorDestacado .contenedorModal3 .textoModal h3 {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 900;
+  }
+  .contenedorDestacado .contenedorModal1 .textoModal p,
+  .contenedorDestacado .contenedorModal2 .textoModal p,
+  .contenedorDestacado .contenedorModal3 .textoModal p {
+    font-size: 3rem;
+  }
+  .contenedorDestacado .contenedorModal1 .textoModal p span,
+  .contenedorDestacado .contenedorModal2 .textoModal p span,
+  .contenedorDestacado .contenedorModal3 .textoModal p span {
+    font-size: 3rem;
+    font-weight: 900;
+  }
+  /*******************************************
+* FIN ESTILOS DEL INDEX.
+*******************************************/
+  /*******************************************
+* COMIENZA ESTILOS DE SOBRE MI:
+*******************************************/
+  .padreContenedorSobreMi {
+    height: 80vh;
+  }
+  .padreContenedorSobreMi h2 {
+    font-size: 5rem !important;
+    width: 100%;
+    margin: 3% 0% 0% 0%;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Roboto Slab", serif;
+    color: firebrick;
+  }
+  .padreContenedorSobreMi .contenedorSobreMi img {
+    width: 40%;
+  }
+  .padreContenedorSobreMi .contenedorSobreMi div {
+    width: 60%;
+    padding: 5%;
+  }
+  .padreContenedorSobreMi .contenedorSobreMi p {
+    font-size: 2rem;
+    color: white;
+    text-align: justify;
+  }
+  /*******************************************
+* FIN ESTILOS DE SOBRE MI.
+*******************************************/
+  /*******************************************
+* COMIENZA ESTILOS DEL PEDIDOS:
+*******************************************/
+  .contenedorPedidos h2 {
+    font-size: 5rem !important;
+  }
+  .contenedorPedidos p {
+    font-size: 2rem;
+  }
+  .contenedorPedidos form .contenedorInfo {
+    width: 20%;
+  }
+  .contenedorPedidos form .contenedorInfo label {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .contenedorPedidos form .contenedorInfo input {
+    border-radius: 5rem;
+    font-size: 1.5rem;
+  }
+  .contenedorPedidos form .contenedorInfo select {
+    border-radius: 5rem;
+    font-size: 1.5rem;
+  }
+  .contenedorPedidos form .contenedoBoton input {
+    font-size: 2rem !important;
+  }
+  .contenedorPedidos form .contenedorCalendario {
+    width: 60%;
+  }
+  .contenedorPedidos form .contenedorCalendario h3 {
+    font-size: 2rem;
+  }
+  .contenedorPedidos form .contenedorCalendario h4 {
+    align-self: center;
+    color: white;
+  }
+  .contenedorPedidos form .contenedorCalendario h5 {
+    display: none;
+  }
+  .contenedorPedidos form .contenedorCalendario span {
+    font-size: 2rem;
+  }
+  .contenedorPedidos form .contenedorCalendario span:hover {
+    background-color: orange;
+  }
+  .contenedorPrecios {
+    width: 80%;
+  }
+  .contenedorPrecios h3 {
+    font-size: 3rem;
+  }
+  .contenedorPrecios div {
+    display: flex;
+    flex-direction: column;
+  }
+  .contenedorPrecios div h4 {
+    font-size: 2rem;
+  }
+  .contenedorPrecios div span {
+    font-size: 1.5rem;
+  }
+  /*******************************************
+* FIN ESTILOS DEL PEDIDOS.
+*******************************************/
+  /*******************************************
+* COMIENZA ESTILOS DE PATRONES:
+*******************************************/
+  .contenedorPatrones h2 {
+    font-size: 5rem !important;
+  }
+  .contenedorPatrones p {
+    font-size: 2rem;
+  }
+  .contenedorPatrones .hijoContenedorPatrones img {
+    width: 90%;
+    border: solid 5px white;
+    border-radius: 50%;
+  }
+  .contenedorPatrones .hijoContenedorPatrones h3 {
+    font-size: 2.3rem;
+  }
+  .contenedorPatrones .hijoContenedorPatrones p {
+    font-size: 2rem;
+  }
+  .contenedorPatrones .hijoContenedorPatrones .precioPatrones {
+    font-size: 2rem;
+  }
+  .contenedorPatrones .hijoContenedorPatrones button {
+    font-size: 2rem !important;
+  }
+  /*******************************************
+* FIN ESTILOS DE PATRONES:
+*******************************************/
+  /*******************************************
+* COMIENZA ESTILOS DEL CONTACTO:
+*******************************************/
+  .contenedorFormulario h2 {
+    font-size: 5rem !important;
+  }
+  .contenedorFormulario form div {
+    width: 70%;
+  }
+  .contenedorFormulario form div label {
+    font-size: 1.5rem;
+  }
+  .contenedorFormulario form div input[type="text"],
+  .contenedorFormulario form div input[type="email"],
+  .contenedorFormulario form div select {
+    font-size: 1.5rem;
+  }
+  .contenedorFormulario form div select option {
+    font-size: 1.5rem !important;
+    background-color: firebrick;
+  }
+  .contenedorFormulario form div span {
+    font-size: 1.2rem !important;
+  }
+  .contenedorFormulario form div textarea {
+    font-size: 1.5rem !important;
+  }
+  .contenedorFormulario form .botonForm input {
+    font-size: 2rem !important;
+  }
+  /*******************************************
+* FIN ESTILOS DEL CONTACTO.
+*******************************************/
+  /*******************************************
+* COMIENZA ESTILOS DEL FOOTER:
+*******************************************/
+  footer address {
+    font-size: 2rem;
+  }
+  footer .contenedorRedesFooter h3 {
+    font-size: 2rem;
+  }
+  footer .contenedorRedesFooter img {
+    width: 15%;
+  }
+  footer .copyRight {
+    font-size: 2rem;
+  }
+  /*******************************************
+* FIN ESTILOS DE FOOTER
+*******************************************/
+}
+
+/*******************************************
+* FIN RESPONSIVE A 2560px:
 *******************************************/
 /*******************************************
 * COMIENZA RESPONSIVE A 580px:

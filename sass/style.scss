@@ -356,7 +356,11 @@ header {
       }
 
       input {
+        border-radius: 5rem;
         margin-bottom: 20%;
+      }
+      select {
+        border-radius: 5rem;
       }
     }
 
@@ -703,6 +707,367 @@ footer {
 
 /*******************************************
 * FIN ESTILOS DE FOOTER
+*******************************************/
+
+/*******************************************
+* COMIENZA RESPONSIVE A 2560px:
+*******************************************/
+
+@media (min-width: 2500px) {
+  /*******************************************
+* COMIENZA ESTILOS DEL HEADER:
+*******************************************/
+
+  header {
+    .menu {
+      ul {
+        li {
+          a {
+            padding: 0% 5% 0% 5%;
+            font-size: 2.6rem;
+          }
+          a:hover {
+            font-size: 2.6rem;
+          }
+        }
+      }
+    }
+
+    .contenedorRedesHeader {
+      h3 {
+        font-size: 2rem;
+      }
+      img {
+        width: 20%;
+      }
+    }
+  }
+
+  /*******************************************
+* FIN ESTILOS DE HEADER
+*******************************************/
+
+  /*******************************************
+* COMIENZA ESTILOS DEL INDEX.
+*******************************************/
+
+  .fondoSection {
+    height: 38vh;
+    h1 {
+      font-size: 8rem;
+    }
+  }
+
+  .contenedorDestacado {
+    margin: 2% 0% 2% 0%;
+
+    h2 {
+      font-size: 5rem !important;
+      margin-bottom: 5% !important;
+      @include encabezadoSecciones;
+    }
+
+    .contenedorImgDestacado1,
+    .contenedorImgDestacado2,
+    .contenedorImgDestacado3 {
+      img {
+      }
+
+      div {
+        p {
+          font-size: 2.5rem;
+        }
+      }
+    }
+    .contenedorModal1,
+    .contenedorModal2,
+    .contenedorModal3 {
+      width: 60%;
+      .botonCerrar {
+        input {
+          font-size: 5rem;
+        }
+      }
+
+      img {
+      }
+      .textoModal {
+        width: 50%;
+        padding-left: 2%;
+        padding-right: 2%;
+        color: $colorRojo;
+        border-radius: 1rem;
+        background-color: $colorBlancoHumo;
+        h3 {
+          text-align: center;
+          font-size: 5rem;
+          font-weight: 900;
+        }
+        p {
+          font-size: 3rem;
+          span {
+            font-size: 3rem;
+            font-weight: 900;
+          }
+        }
+      }
+    }
+  }
+
+  /*******************************************
+* FIN ESTILOS DEL INDEX.
+*******************************************/
+
+  /*******************************************
+* COMIENZA ESTILOS DE SOBRE MI:
+*******************************************/
+  .padreContenedorSobreMi {
+    height: 80vh;
+    h2 {
+      font-size: 5rem !important;
+      @include encabezadoSecciones;
+    }
+
+    .contenedorSobreMi {
+      img {
+        width: 40%;
+      }
+
+      div {
+        width: 60%;
+        padding: 5%;
+      }
+
+      p {
+        font-size: 2rem;
+        color: $colorBlanco;
+        text-align: justify;
+      }
+    }
+  }
+
+  /*******************************************
+* FIN ESTILOS DE SOBRE MI.
+*******************************************/
+
+  /*******************************************
+* COMIENZA ESTILOS DEL PEDIDOS:
+*******************************************/
+
+  .contenedorPedidos {
+    h2 {
+      font-size: 5rem !important;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+    form {
+      .contenedorInfo {
+        width: 20%;
+
+        label {
+          font-size: 1.5rem;
+          font-weight: 700;
+        }
+
+        input {
+          border-radius: 5rem;
+          font-size: 1.5rem;
+        }
+
+        select {
+          border-radius: 5rem;
+          font-size: 1.5rem;
+        }
+      }
+
+      .contenedoBoton {
+        input {
+          font-size: 2rem !important;
+        }
+      }
+
+      .contenedorCalendario {
+        width: 60%;
+
+        h3 {
+          font-size: 2rem;
+        }
+
+        h4 {
+          align-self: center;
+          color: $colorBlanco;
+        }
+
+        h5 {
+          display: none;
+        }
+
+        span {
+          font-size: 2rem;
+        }
+
+        span:hover {
+          background-color: $colorNaranja;
+        }
+      }
+    }
+  }
+
+  .contenedorPrecios {
+    width: 80%;
+
+    h3 {
+      font-size: 3rem;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      h4 {
+        font-size: 2rem;
+      }
+
+      span {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  /*******************************************
+* FIN ESTILOS DEL PEDIDOS.
+*******************************************/
+
+  /*******************************************
+* COMIENZA ESTILOS DE PATRONES:
+*******************************************/
+
+  .contenedorPatrones {
+    h2 {
+      font-size: 5rem !important;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+
+    .hijoContenedorPatrones {
+      img {
+        width: 90%;
+        border: solid 5px $colorBlanco;
+        border-radius: 50%;
+      }
+
+      h3 {
+        font-size: 2.3rem;
+      }
+
+      p {
+        font-size: 2rem;
+      }
+
+      .precioPatrones {
+        font-size: 2rem;
+
+        span {
+        }
+      }
+
+      button {
+        font-size: 2rem !important;
+      }
+    }
+  }
+
+  /*******************************************
+* FIN ESTILOS DE PATRONES:
+*******************************************/
+
+  /*******************************************
+* COMIENZA ESTILOS DEL CONTACTO:
+*******************************************/
+
+  .contenedorFormulario {
+    h2 {
+      font-size: 5rem !important;
+    }
+
+    form {
+      div {
+        width: 70%;
+
+        label {
+          font-size: 1.5rem;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+          font-size: 1.5rem;
+        }
+
+        select {
+          option {
+            font-size: 1.5rem !important;
+
+            background-color: $colorRojo;
+          }
+        }
+
+        span {
+          font-size: 1.2rem !important;
+        }
+
+        textarea {
+          font-size: 1.5rem !important;
+        }
+      }
+
+      .botonForm {
+        input {
+          font-size: 2rem !important;
+        }
+      }
+    }
+  }
+
+  /*******************************************
+* FIN ESTILOS DEL CONTACTO.
+*******************************************/
+
+  /*******************************************
+* COMIENZA ESTILOS DEL FOOTER:
+*******************************************/
+
+  footer {
+    address {
+      font-size: 2rem;
+    }
+
+    .contenedorRedesFooter {
+      h3 {
+        font-size: 2rem;
+      }
+
+      img {
+        width: 15%;
+      }
+    }
+
+    .copyRight {
+      font-size: 2rem;
+    }
+  }
+
+  /*******************************************
+* FIN ESTILOS DE FOOTER
+*******************************************/
+}
+
+/*******************************************
+* FIN RESPONSIVE A 2560px:
 *******************************************/
 
 /*******************************************
