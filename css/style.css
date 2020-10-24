@@ -67,7 +67,7 @@ header .contenedorRedesHeader img {
 .fondoSection {
   background-image: url("../img/index/fondo.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   height: 50vh;
   display: flex;
   align-items: center;
@@ -736,7 +736,7 @@ footer .copyRight {
 * COMIENZA ESTILOS DEL INDEX.
 *******************************************/
   .fondoSection {
-    height: 38vh;
+    height: 55vh;
   }
   .fondoSection h1 {
     font-size: 8rem;
@@ -804,7 +804,7 @@ footer .copyRight {
 * COMIENZA ESTILOS DE SOBRE MI:
 *******************************************/
   .padreContenedorSobreMi {
-    height: 80vh;
+    height: 100vh;
   }
   .padreContenedorSobreMi h2 {
     font-size: 5rem !important;
